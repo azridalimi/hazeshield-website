@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HazeShield: inovasi teknologi hijau untuk pemantauan kualiti udara dan kesihatan tanaman menggunakan IoT dan AI.">
+  <title>HazeShield | Smart Agriculture & AI</title>
+  <style>
+    :root {
+      --green: #16834a;
+      --dark: #102b20;
+      --light: #f3f8f3;
+      --muted: #64756a;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--dark);
+      background: white;
+      line-height: 1.7;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 7%;
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 12px #102b2010;
+    }
+    .brand { font-size: 1.35rem; font-weight: 800; color: var(--green); }
+    nav a { color: var(--dark); text-decoration: none; margin-left: 20px; font-size: .92rem; }
+    .hero {
+      padding: 90px 7%;
+      background: linear-gradient(125deg, #eaf7eb, #f7fbf5);
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 45px;
+      align-items: center;
+    }
+    .eyebrow { color: var(--green); font-weight: bold; letter-spacing: 2px; font-size: .8rem; }
+    h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; margin: 15px 0; }
+    h2 { font-size: 2rem; line-height: 1.2; }
+    .hero p, .intro { color: var(--muted); max-width: 650px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+    .btn {
+      display: inline-block; padding: 12px 20px; border-radius: 9px;
+      background: var(--green); color: white; text-decoration: none; font-weight: bold;
+    }
+    .btn.secondary { background: white; color: var(--green); border: 1px solid #c6dfca; }
+    .visual {
+      min-height: 300px; border-radius: 24px;
+      background: linear-gradient(145deg, #c8e9c9, #4c9c68);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 7rem; box-shadow: 0 18px 45px #236c3c20;
+    }
+    section { padding: 70px 7%; }
+    .center { text-align: center; }
+    .center .intro { margin: 0 auto; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px; }
+    .card { border: 1px solid #e2ebe2; border-radius: 16px; padding: 24px; background: white; }
+    .card .emoji { font-size: 2rem; }
+    .card h3 { margin-bottom: 8px; }
+    .card p { color: var(--muted); margin-bottom: 0; }
+    .soft { background: var(--light); }
+    .ai-panel {
+      max-width: 850px; margin: 28px auto 0; padding: 28px;
+      border-radius: 20px; background: white; border: 1px solid #dce9dc;
+      box-shadow: 0 12px 35px #102b200b;
+    }
+    .ai-panel p { color: var(--muted); }
+    .notice { background: #fff7df; padding: 12px 15px; border-radius: 8px; font-size: .9rem; }
+    footer { background: #102b20; color: #e4f0e6; padding: 30px 7%; text-align: center; }
+    footer p { margin: 5px; }
+    @media (max-width: 760px) {
+      nav { padding: 14px 5%; flex-wrap: wrap; gap: 8px; }
+      nav a { margin-left: 0; margin-right: 12px; }
+      .hero { grid-template-columns: 1fr; padding: 60px 6%; }
+      .visual { min-height: 200px; font-size: 5rem; }
+      section { padding: 55px 6%; }
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="brand">🌿 HazeShield</div>
+    <div>
+      <a href="#tentang">Tentang</a>
+      <a href="#teknologi">Teknologi</a>
+      <a href="#ai">HazeShield AI</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <div class="eyebrow">GREEN TECHNOLOGY · SMART AGRICULTURE</div>
+      <h1>Melindungi tanaman, memahami jerebu.</h1>
+      <p>
+        HazeShield ialah projek inovasi yang meneroka hubungan antara
+        kualiti udara, jerebu dan kesihatan tanaman melalui teknologi
+        pemantauan pintar serta kecerdasan buatan.
+      </p>
+      <div class="actions">
+        <a class="btn" href="#tentang">Terokai Projek</a>
+        <a class="btn secondary" href="#ai">Tanya HazeShield AI</a>
+      </div>
+    </div>
+    <div class="visual" aria-label="Ilustrasi tanaman">🌱</div>
+  </header>
+
+  <section id="tentang">
+    <div class="center">
+      <div class="eyebrow">TENTANG PROJEK</div>
+      <h2>Apakah itu HazeShield?</h2>
+      <p class="intro">
+        HazeShield memfokuskan kepada kesan jerebu dan pencemaran udara
+        terhadap tanaman serta potensi penggunaan pemantauan kualiti
+        udara, Internet of Things (IoT) dan AI untuk menyokong pertanian
+        yang lebih bermaklumat.
+      </p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="emoji">🌫️</div>
+        <h3>Cabaran Jerebu</h3>
+        <p>Meneroka bagaimana zarah pencemar dan perubahan cahaya boleh mempengaruhi fotosintesis serta pertumbuhan tanaman.</p>
+      </article>
+      <article class="card">
+        <div class="emoji">📡</div>
+        <h3>Pemantauan Pintar</h3>
+        <p>Merancang penggunaan sensor untuk memantau parameter persekitaran yang relevan kepada tanaman.</p>
+      </article>
+      <article class="card">
+        <div class="emoji">🌿</div>
+        <h3>Kesihatan Tanaman</h3>
+        <p>Menyokong pemahaman dan langkah penjagaan untuk sayur-sayuran, buah-buahan, pokok serta tanaman lain.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="teknologi" class="soft">
+    <div class="center">
+      <div class="eyebrow">PENDEKATAN TEKNOLOGI</div>
+      <h2>Daripada data kepada pemahaman</h2>
+      <p class="intro">HazeShield menggabungkan bidang teknologi yang berpotensi membantu pemantauan persekitaran tanaman.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="emoji">🌡️</div>
+        <h3>Sensor Persekitaran</h3>
+        <p>Parameter seperti suhu, kelembapan dan kualiti udara boleh dipantau menggunakan sensor yang bersesuaian.</p>
+      </article>
+      <article class="card">
+        <div class="emoji">📶</div>
+        <h3>Internet of Things</h3>
+        <p>IoT boleh membantu menghantar dan memaparkan bacaan sensor apabila perkakasan dan sambungan tersedia.</p>
+      </article>
+      <article class="card">
+        <div class="emoji">🤖</div>
+        <h3>Kecerdasan Buatan</h3>
+        <p>HazeShield AI membantu menerangkan isu jerebu, kesihatan tanaman dan teknologi pertanian pintar.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="ai">
+    <div class="center">
+      <div class="eyebrow">PEMBANTU MAYA</div>
+      <h2>Berkenalan dengan HazeShield AI</h2>
+      <p class="intro">Tanya soalan tentang jerebu, kualiti udara, kesihatan tanaman dan pertanian pintar.</p>
+    </div>
+    <div class="ai-panel">
+      <h3>🌱 HazeShield AI sedia membantu</h3>
+      <p>
+        Gunakan chatbot AI projek untuk mendapatkan penerangan tentang
+        kesan jerebu terhadap pelbagai jenis tanaman serta idea pemantauan
+        menggunakan sensor dan IoT.
+      </p>
+      <div class="actions">
+        <!-- Kita akan masukkan sambungan chatbot di sini dalam langkah seterusnya. -->
+        <a class="btn" href="#ai" id="aiButton">Sediakan ruang AI</a>
+      </div>
+      <p class="notice">
+        Nota: AI memberikan panduan umum. Bacaan sensor sebenar hanya akan
+        dipaparkan apabila sistem sensor disambungkan.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>🌿 HazeShield</strong></p>
+    <p>Green Technology · Smart Agriculture · IoT · AI</p>
+    <p>© <span id="year"></span> HazeShield Project</p>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
