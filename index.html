@@ -5,27 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>VERDANEX | Future of Green Innovation</title>
-
-    <meta name="description" content="Discover VERDANEX, green technology innovation, HazeShield smart agriculture, IoT environmental monitoring and sustainable solutions.">
+    <title>VERDANEX | Green Innovation</title>
+    <meta name="description" content="VERDANEX explores green innovation, smart agriculture and technology-driven sustainability concepts.">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- FAVICON: LOGO VERDANEX TANPA TAGLINE -->
-    <!-- Tukar nama fail di bawah jika nama fail sebenar berbeza -->
+    <!-- Favicon: VERDANEX logo WITHOUT tagline -->
     <link rel="icon" type="image/png"
-          href="./images/Verdanex%20Green%20Tech%20logo.png?v=3">
-    <link rel="shortcut icon"
-          href="./images/Verdanex%20Green%20Tech%20logo.png?v=3">
+          href="./images/Verdanex%20Green%20Tech%20Logo.png?v=6">
 
     <style>
         :root {
-            --green: #16834a;
-            --green-dark: #105b35;
-            --green-light: #eaf7ee;
-            --text: #20352a;
-            --muted: #637368;
-            --white: #ffffff;
-            --border: #dce9df;
+            --green: #16804a;
+            --green-dark: #0b5032;
+            --green-pale: #eaf7ee;
+            --background: #ffffff;
+            --surface: #f5faf6;
+            --text: #18271e;
+            --muted: #66746a;
+            --border: #e1eae3;
+            --shadow: 0 16px 45px rgba(15, 70, 38, .08);
+            --radius: 22px;
         }
 
         * {
@@ -36,14 +35,20 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 100px;
+            scroll-padding-top: 90px;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: var(--white);
+            font-family: Inter, "Segoe UI", Arial, sans-serif;
             color: var(--text);
+            background: var(--background);
             line-height: 1.7;
+            overflow-wrap: break-word;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
         }
 
         a {
@@ -51,377 +56,961 @@
             text-decoration: none;
         }
 
-        img {
-            max-width: 100%;
+        button {
+            font: inherit;
         }
 
-        /* NAVIGATION */
+        .container {
+            width: min(1120px, calc(100% - 48px));
+            margin-inline: auto;
+        }
+
+        /* HEADER */
+
         .navbar {
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            background: rgba(255, 255, 255, .96);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            min-height: 82px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 25px;
-            padding: 14px 7%;
-            background: rgba(255, 255, 255, 0.97);
-            border-bottom: 1px solid var(--border);
-            box-shadow: 0 3px 15px rgba(20, 70, 40, 0.04);
+            gap: 20px;
         }
 
         .brand {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            flex-shrink: 0;
+            min-width: 0;
         }
 
-        /* LOGO DENGAN TAGLINE PADA WEBSITE */
-        .brand-logo {
-            display: block;
-            width: 220px;
-            height: auto;
+        .brand img {
+            width: 225px;
+            max-height: 68px;
             object-fit: contain;
+            object-position: left center;
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
+            gap: 24px;
         }
 
         .nav-links a {
-            color: #415548;
-            font-size: 14px;
-            font-weight: 600;
-            transition: color 0.2s;
+            font-size: .9rem;
+            font-weight: 650;
+            color: #435348;
+            transition: color .2s;
         }
 
         .nav-links a:hover {
             color: var(--green);
         }
 
-        /* HERO */
-        .hero {
-            position: relative;
-            overflow: hidden;
-            padding: 100px 8%;
-            background:
-                radial-gradient(
-                    circle at 85% 15%,
-                    rgba(90, 190, 115, 0.16),
-                    transparent 35%
-                ),
-                linear-gradient(135deg, #f5fbf6, #e8f6ec);
+        .nav-links .nav-cta {
+            background: var(--green);
+            color: #fff;
+            padding: 11px 17px;
+            border-radius: 999px;
         }
 
-        .hero-content {
-            max-width: 850px;
+        .menu-toggle {
+            display: none;
+            width: 46px;
+            height: 46px;
+            flex-shrink: 0;
+            place-items: center;
+            border: 1px solid var(--border);
+            border-radius: 13px;
+            background: #fff;
+            color: var(--green-dark);
+            font-size: 1.45rem;
+            cursor: pointer;
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 95px 0 85px;
+            background:
+                radial-gradient(ellipse at 85% 15%, #dff4e5 0, transparent 36%),
+                linear-gradient(135deg, #f8fcf8, #fff 70%);
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .eyebrow,
+        .section-label {
+            color: var(--green);
+            font-size: .78rem;
+            font-weight: 800;
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
         }
 
         .eyebrow {
-            display: inline-block;
-            padding: 7px 14px;
-            border-radius: 30px;
-            border: 1px solid #b8dfc4;
-            background: #ffffff;
-            color: var(--green-dark);
-            font-size: 12px;
-            font-weight: bold;
-            letter-spacing: 1.5px;
-            margin-bottom: 23px;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 13px;
+            border-radius: 999px;
+            border: 1px solid #d6eddb;
+            background: var(--green-pale);
         }
 
-        .hero h1 {
-            max-width: 800px;
-            font-size: clamp(40px, 6vw, 68px);
-            line-height: 1.12;
-            letter-spacing: -1.5px;
-            margin-bottom: 24px;
-            color: #193d29;
+        .eyebrow::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #239d58;
         }
 
-        .hero h1 span {
+        h1 {
+            margin: 23px 0 20px;
+            font-size: clamp(2.8rem, 5.4vw, 4.7rem);
+            line-height: 1.08;
+            letter-spacing: -2.4px;
+        }
+
+        .highlight {
             color: var(--green);
         }
 
-        .hero p {
-            max-width: 700px;
-            font-size: 17px;
-            color: #586d60;
-            margin-bottom: 30px;
+        .hero-description {
+            max-width: 570px;
+            color: var(--muted);
+            font-size: 1.06rem;
+            margin-bottom: 28px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
         }
 
         .button {
-            display: inline-block;
-            margin: 5px 8px 5px 0;
-            padding: 12px 22px;
-            border: 1px solid var(--green);
-            border-radius: 8px;
-            background: var(--green);
-            color: #ffffff;
-            font-weight: bold;
-            transition: 0.2s;
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 13px 20px;
+            border: 1px solid transparent;
+            border-radius: 12px;
+            text-align: center;
+            font-size: .94rem;
+            font-weight: 750;
+            transition: transform .2s, background .2s;
+            cursor: pointer;
         }
 
         .button:hover {
-            background: var(--green-dark);
             transform: translateY(-2px);
         }
 
-        .button-outline {
-            background: #ffffff;
+        .button-primary {
+            background: var(--green);
+            color: #fff;
+        }
+
+        .button-primary:hover {
+            background: var(--green-dark);
+        }
+
+        .button-secondary {
+            background: #fff;
+            border-color: var(--border);
             color: var(--green-dark);
         }
 
-        .button-outline:hover {
-            color: #ffffff;
+        .hero-note {
+            margin-top: 22px;
+            color: var(--muted);
+            font-size: .85rem;
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-card {
+            width: 100%;
+            max-width: 430px;
+            padding: 32px;
+            text-align: center;
+            border: 1px solid #dceee0;
+            border-radius: 28px;
+            background: rgba(255, 255, 255, .92);
+            box-shadow: var(--shadow);
+        }
+
+        .hero-card img {
+            width: 100%;
+            max-width: 330px;
+            max-height: 190px;
+            margin: 0 auto 20px;
+            object-fit: contain;
+        }
+
+        .hero-card h2 {
+            margin-bottom: 8px;
+            font-size: 1.4rem;
+            line-height: 1.3;
+        }
+
+        .hero-card p {
+            color: var(--muted);
+            font-size: .94rem;
         }
 
         /* SECTIONS */
+
         section {
-            padding: 78px 8%;
+            padding: 85px 0;
         }
 
         .section-heading {
-            max-width: 780px;
+            max-width: 700px;
+            margin: 0 auto 43px;
             text-align: center;
-            margin: 0 auto 42px;
         }
 
-        .section-heading h2 {
-            font-size: clamp(29px, 4vw, 42px);
-            line-height: 1.25;
-            color: #193d29;
-            margin-bottom: 14px;
+        .section-title {
+            margin: 12px 0 15px;
+            font-size: clamp(2rem, 3.8vw, 3rem);
+            line-height: 1.2;
+            letter-spacing: -1.2px;
         }
 
-        .section-heading p {
+        .section-description {
             color: var(--muted);
-        }
-
-        .green {
-            color: var(--green);
         }
 
         /* ABOUT */
-        .about-content {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .about-copy h2 {
+            margin: 13px 0 20px;
+            font-size: clamp(2rem, 3.6vw, 2.8rem);
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .about-copy p {
+            margin-bottom: 16px;
             color: var(--muted);
-            font-size: 17px;
         }
 
-        /* INNOVATION CARDS */
-        .soft-section {
-            background: #f6faf7;
+        .about-copy .button {
+            margin-top: 8px;
         }
 
-        .cards {
+        .about-panel {
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--surface);
+        }
+
+        .about-panel h3 {
+            margin-bottom: 16px;
+            font-size: 1.25rem;
+        }
+
+        .focus-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .focus-item:last-child {
+            border-bottom: 0;
+        }
+
+        .focus-icon {
+            width: 44px;
+            height: 44px;
+            display: grid;
+            flex-shrink: 0;
+            place-items: center;
+            border-radius: 13px;
+            background: #fff;
+            font-size: 1.3rem;
+        }
+
+        .focus-item h4 {
+            margin-bottom: 3px;
+        }
+
+        .focus-item p {
+            color: var(--muted);
+            font-size: .91rem;
+        }
+
+        /* INNOVATION */
+
+        .innovation-section,
+        .ai-section {
+            background: var(--surface);
+        }
+
+        .card-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 23px;
+            gap: 22px;
         }
 
-        .card {
+        .feature-card {
+            min-width: 0;
             padding: 28px;
-            background: #ffffff;
             border: 1px solid var(--border);
-            border-radius: 15px;
-            box-shadow: 0 8px 28px rgba(30, 80, 45, 0.045);
-            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: var(--radius);
+            background: #fff;
+            transition: transform .2s, box-shadow .2s;
         }
 
-        .card:hover {
+        .feature-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(30, 80, 45, 0.09);
+            box-shadow: var(--shadow);
         }
 
-        .card-icon {
-            font-size: 31px;
-            margin-bottom: 12px;
+        .feature-icon {
+            width: 52px;
+            height: 52px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 19px;
+            border-radius: 15px;
+            background: var(--green-pale);
+            font-size: 1.55rem;
         }
 
-        .card h3 {
-            color: var(--green-dark);
-            margin-bottom: 12px;
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.17rem;
+            line-height: 1.4;
         }
 
-        .card p {
+        .feature-card p {
             color: var(--muted);
-            font-size: 15px;
+            font-size: .94rem;
         }
 
         /* HAZESHIELD */
-        .project-panel {
-            max-width: 1000px;
-            margin: auto;
-            padding: 36px;
-            border-radius: 17px;
-            border: 1px solid var(--border);
-            background: #ffffff;
-            box-shadow: 0 10px 35px rgba(30, 80, 45, 0.06);
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 48px;
         }
 
-        .project-panel h3 {
+        .project-visual {
+            min-height: 310px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #dceee0;
+            border-radius: 27px;
+            background:
+                radial-gradient(circle at 80% 15%, #c9efd3, transparent 35%),
+                #f0f8f1;
+        }
+
+        .plant {
+            margin-bottom: 12px;
+            font-size: 5rem;
+        }
+
+        .project-visual h3 {
             color: var(--green-dark);
-            font-size: 28px;
-            margin-bottom: 15px;
+            font-size: 1.7rem;
         }
 
-        .project-panel p {
-            color: var(--muted);
-            margin-bottom: 15px;
-        }
-
-        .project-panel ul {
-            padding-left: 23px;
-            margin-bottom: 20px;
+        .project-visual p {
+            margin-top: 7px;
             color: var(--muted);
         }
 
-        .project-panel li {
-            margin-bottom: 8px;
+        .project-copy h2 {
+            margin: 12px 0 19px;
+            font-size: clamp(2rem, 3.6vw, 2.8rem);
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .project-copy p {
+            margin-bottom: 16px;
+            color: var(--muted);
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 22px 0 25px;
+        }
+
+        .tag {
+            padding: 7px 11px;
+            border-radius: 999px;
+            background: var(--green-pale);
+            color: var(--green-dark);
+            font-size: .8rem;
+            font-weight: 700;
         }
 
         /* AZRI AI */
-        .ai-section {
-            background: #f5faf6;
-        }
 
-        .ai-note {
-            max-width: 800px;
-            margin: 0 auto 25px;
-            text-align: center;
-            color: var(--muted);
+        .ai-panel {
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: 25px;
+            background: #fff;
+            box-shadow: var(--shadow);
         }
 
         .ai-frame {
             display: block;
             width: 100%;
-            height: 650px;
+            height: 620px;
             border: 1px solid var(--border);
             border-radius: 15px;
-            background: #ffffff;
-            box-shadow: 0 8px 28px rgba(30, 80, 45, 0.06);
+            background: #f8faf8;
         }
 
-        .ai-fallback {
-            margin-top: 20px;
-            text-align: center;
+        .ai-note {
+            margin-top: 14px;
             color: var(--muted);
+            font-size: .9rem;
         }
 
-        .ai-fallback a {
-            color: var(--green);
-            font-weight: bold;
+        .ai-open {
+            margin-top: 13px;
         }
 
-        /* UTM LOGO */
-        .partner-card {
-            max-width: 720px;
+        /* COLLABORATION */
+
+        .collab-card {
+            max-width: 850px;
             margin: auto;
-            padding: 30px;
-            text-align: center;
+            padding: 35px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 35px;
             border: 1px solid var(--border);
-            border-radius: 16px;
-            background: #ffffff;
-            box-shadow: 0 8px 28px rgba(30, 80, 45, 0.05);
+            border-radius: 26px;
+            background: #fff;
+            box-shadow: var(--shadow);
         }
 
-        .utm-logo {
-            display: block;
-            width: min(100%, 500px);
-            max-height: 240px;
+        .collab-logo {
+            min-height: 190px;
+            padding: 20px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            background: #f8faf8;
+        }
+
+        .collab-logo img {
+            width: 100%;
+            max-height: 175px;
             object-fit: contain;
-            margin: 0 auto 15px;
         }
 
-        .partner-caption {
-            color: var(--green-dark);
-            font-weight: bold;
+        .collab-copy h3 {
+            margin: 12px 0;
+            font-size: 1.55rem;
+            line-height: 1.3;
+        }
+
+        .collab-copy p {
+            color: var(--muted);
+            font-size: .95rem;
         }
 
         /* CONTACT */
-        .contact {
+
+        .contact-panel {
+            padding: 55px 28px;
             text-align: center;
-            background: var(--green-light);
+            color: #fff;
+            border-radius: 27px;
+            background: linear-gradient(135deg, #0b5032, #16804a);
         }
 
-        .contact p {
-            max-width: 720px;
-            margin: 0 auto 22px;
-            color: var(--muted);
+        .contact-panel h2 {
+            margin-bottom: 15px;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.2;
+        }
+
+        .contact-panel p {
+            max-width: 620px;
+            margin: 0 auto 25px;
+            color: #e1f4e6;
+        }
+
+        .contact-panel .button {
+            color: var(--green-dark);
+            background: #fff;
+        }
+
+        .contact-panel .button:hover {
+            background: var(--green-pale);
         }
 
         /* FOOTER */
+
         footer {
-            padding: 28px 7%;
-            text-align: center;
-            background: #103d28;
-            color: #e7f5eb;
-            font-size: 13px;
+            padding: 25px 0;
+            border-top: 1px solid var(--border);
+            background: #fff;
         }
 
-        footer p + p {
-            margin-top: 5px;
-            color: #b9d9c3;
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
         }
 
-        /* MOBILE */
+        .footer-inner p,
+        .footer-links a {
+            color: var(--muted);
+            font-size: .85rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .footer-links a:hover {
+            color: var(--green);
+        }
+
+        /* TABLET */
+
         @media (max-width: 900px) {
-            .navbar {
-                flex-direction: column;
-                gap: 12px;
+            .nav-inner {
+                min-height: 74px;
             }
 
-            .brand-logo {
+            .brand img {
                 width: 200px;
+                max-height: 62px;
+            }
+
+            .menu-toggle {
+                display: grid;
             }
 
             .nav-links {
-                justify-content: center;
-                gap: 12px 17px;
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                padding: 17px 24px 23px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 5px;
+                background: #fff;
+                border-bottom: 1px solid var(--border);
+                box-shadow: 0 14px 24px rgba(0, 0, 0, .05);
             }
 
-            .cards {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 58px 6%;
-            }
-
-            .hero {
-                padding: 75px 7%;
-            }
-
-            .project-panel {
-                padding: 25px;
-            }
-
-            .ai-frame {
-                height: 600px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .brand-logo {
-                width: 180px;
+            .nav-links.open {
+                display: flex;
             }
 
             .nav-links a {
-                font-size: 13px;
+                padding: 10px 4px;
+                font-size: .96rem;
             }
 
-            .hero h1 {
-                font-size: 40px;
+            .nav-links .nav-cta {
+                margin-top: 5px;
+                padding: 12px 16px;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+            }
+
+            .hero-card {
+                padding: 24px;
+            }
+
+            .about-grid,
+            .project-grid {
+                gap: 30px;
+            }
+
+            .card-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 640px) {
+            html {
+                scroll-padding-top: 75px;
+            }
+
+            .container {
+                width: calc(100% - 36px);
+            }
+
+            .nav-inner {
+                min-height: 70px;
+                gap: 12px;
+            }
+
+            .brand {
+                flex: 1;
+                min-width: 0;
+            }
+
+            .brand img {
+                width: min(190px, 100%);
+                max-height: 56px;
+            }
+
+            .menu-toggle {
+                width: 44px;
+                height: 44px;
+            }
+
+            .nav-links {
+                padding-inline: 18px;
+            }
+
+            section {
+                padding: 62px 0;
+            }
+
+            .hero {
+                padding: 56px 0 58px;
+                background:
+                    radial-gradient(ellipse at 100% 0%, #e4f5e8, transparent 40%),
+                    #fbfdfb;
+            }
+
+            .hero-grid {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 32px;
+            }
+
+            .eyebrow {
+                font-size: .68rem;
+                letter-spacing: .8px;
+                padding: 7px 11px;
+            }
+
+            h1 {
+                margin: 19px 0 17px;
+                font-size: clamp(2.45rem, 11vw, 3.55rem);
+                line-height: 1.09;
+                letter-spacing: -1.7px;
+            }
+
+            .hero-description {
+                margin-bottom: 23px;
+                font-size: .98rem;
+                line-height: 1.75;
+            }
+
+            .button-group {
+                gap: 10px;
+            }
+
+            .hero .button-group {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .button {
+                width: 100%;
+                min-height: 49px;
+                padding: 13px 16px;
+            }
+
+            .hero-note {
+                margin-top: 17px;
+                font-size: .82rem;
+            }
+
+            .hero-visual {
+                width: 100%;
+            }
+
+            .hero-card {
+                max-width: none;
+                padding: 23px 20px;
+                border-radius: 22px;
+            }
+
+            .hero-card img {
+                max-height: 145px;
+                margin-bottom: 17px;
+            }
+
+            .hero-card h2 {
+                font-size: 1.25rem;
+            }
+
+            .hero-card p {
+                font-size: .9rem;
+            }
+
+            .section-heading {
+                margin-bottom: 30px;
+                text-align: left;
+            }
+
+            .section-title {
+                font-size: clamp(1.85rem, 8vw, 2.5rem);
+                letter-spacing: -.8px;
+            }
+
+            .section-description {
+                font-size: .96rem;
+            }
+
+            .about-grid,
+            .project-grid {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 27px;
+            }
+
+            .about-copy h2,
+            .project-copy h2 {
+                font-size: clamp(1.95rem, 8vw, 2.5rem);
+                letter-spacing: -.8px;
+            }
+
+            .about-copy p,
+            .project-copy p {
+                font-size: .96rem;
+            }
+
+            .about-panel {
+                padding: 22px;
+                border-radius: 19px;
+            }
+
+            .focus-item {
+                gap: 12px;
+                padding: 14px 0;
+            }
+
+            .focus-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .card-grid {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 14px;
+            }
+
+            .feature-card {
+                padding: 23px;
+                border-radius: 18px;
+            }
+
+            .feature-icon {
+                width: 47px;
+                height: 47px;
+                margin-bottom: 15px;
+                font-size: 1.4rem;
+            }
+
+            .feature-card h3 {
+                font-size: 1.12rem;
+            }
+
+            .feature-card p {
+                font-size: .93rem;
+            }
+
+            .project-visual {
+                min-height: 235px;
+                padding: 24px 18px;
+                border-radius: 21px;
+            }
+
+            .plant {
+                font-size: 4rem;
+            }
+
+            .project-visual h3 {
+                font-size: 1.5rem;
+            }
+
+            .tag-list {
+                gap: 7px;
+                margin: 18px 0 22px;
+            }
+
+            .tag {
+                font-size: .75rem;
+            }
+
+            .ai-panel {
+                padding: 12px;
+                border-radius: 19px;
             }
 
             .ai-frame {
-                height: 550px;
+                height: 560px;
+                border-radius: 12px;
+            }
+
+            .ai-note {
+                padding: 0 4px;
+                font-size: .84rem;
+            }
+
+            .ai-open {
+                margin: 12px 4px 4px;
+            }
+
+            .collab-card {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 23px;
+                padding: 20px;
+                border-radius: 21px;
+            }
+
+            .collab-logo {
+                min-height: 155px;
+                padding: 16px;
+            }
+
+            .collab-logo img {
+                max-height: 135px;
+            }
+
+            .collab-copy h3 {
+                font-size: 1.35rem;
+            }
+
+            .collab-copy p {
+                font-size: .93rem;
+            }
+
+            .contact-panel {
+                padding: 39px 21px;
+                border-radius: 22px;
+            }
+
+            .contact-panel h2 {
+                font-size: clamp(1.85rem, 8vw, 2.5rem);
+                letter-spacing: -.7px;
+            }
+
+            .contact-panel p {
+                font-size: .94rem;
+            }
+
+            .contact-panel .button-group {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .footer-links {
+                gap: 14px;
+            }
+        }
+
+        /* VERY SMALL PHONES */
+
+        @media (max-width: 360px) {
+            .container {
+                width: calc(100% - 28px);
+            }
+
+            .brand img {
+                width: 160px;
+            }
+
+            h1 {
+                font-size: 2.25rem;
+            }
+
+            .hero-card {
+                padding: 18px 14px;
+            }
+
+            .about-panel,
+            .feature-card,
+            .collab-card {
+                padding: 18px;
+            }
+
+            .ai-frame {
+                height: 500px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
             }
         }
     </style>
@@ -429,234 +1018,437 @@
 
 <body>
 
-    <!-- HEADER: LOGO VERDANEX DENGAN TAGLINE -->
+    <!-- HEADER -->
     <header class="navbar">
-        <a class="brand" href="#home" aria-label="VERDANEX Home">
-            <img
-                class="brand-logo"
-                src="./images/Verdanex%20Green%20Innovation%20Branding.png"
-                alt="VERDANEX Green Innovation"
-            >
-        </a>
+        <div class="container nav-inner">
 
-        <nav class="nav-links" aria-label="Main navigation">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#innovation">Innovation</a>
-            <a href="#hazeshield">HazeShield</a>
-            <a href="#ai">Azri AI</a>
-            <a href="#partners">Partners</a>
-        </nav>
+            <a class="brand" href="#home" aria-label="VERDANEX home">
+                <!-- Logo WITH tagline -->
+                <img
+                    src="./images/Verdanex%20Green%20Innovation%20Branding.png"
+                    alt="VERDANEX Green Innovation"
+                >
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
+                ☰
+            </button>
+
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#innovation">Innovation</a>
+                <a href="#hazeshield">HazeShield</a>
+                <a href="#azri-ai">Azri AI</a>
+                <a href="#collaboration">Collaboration</a>
+                <a class="nav-cta" href="#contact">Contact ↗</a>
+            </nav>
+
+        </div>
     </header>
 
     <main>
 
         <!-- HERO -->
         <section class="hero" id="home">
-            <div class="hero-content">
-                <div class="eyebrow">
-                    GREEN TECHNOLOGY · SMART AGRICULTURE · IoT
+            <div class="container hero-grid">
+
+                <div>
+                    <span class="eyebrow">Green Innovation & Technology</span>
+
+                    <h1>
+                        Innovating for a
+                        <span class="highlight">Greener</span>
+                        Tomorrow.
+                    </h1>
+
+                    <p class="hero-description">
+                        VERDANEX explores the intersection of technology,
+                        sustainability and smart agriculture to develop
+                        ideas for a greener future.
+                    </p>
+
+                    <div class="button-group">
+                        <a class="button button-primary" href="#innovation">
+                            Explore Our Vision →
+                        </a>
+
+                        <a class="button button-secondary" href="#hazeshield">
+                            Discover HazeShield
+                        </a>
+                    </div>
+
+                    <p class="hero-note">
+                        Green ideas. Meaningful innovation. A better future.
+                    </p>
                 </div>
 
-                <h1>
-                    Innovating for a
-                    <span>Greener Future.</span>
-                </h1>
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <img
+                            src="./images/Verdanex%20Green%20Innovation%20Branding.png"
+                            alt="VERDANEX logo with tagline"
+                        >
 
-                <p>
-                    VERDANEX explores sustainable technology and innovative
-                    ideas to support smarter agriculture, environmental
-                    monitoring and a more sustainable future.
-                </p>
+                        <h2>Technology with Purpose</h2>
 
-                <a href="#hazeshield" class="button">
-                    Explore HazeShield
-                </a>
+                        <p>
+                            Exploring innovation for sustainability,
+                            environmental awareness and smart agriculture.
+                        </p>
+                    </div>
+                </div>
 
-                <a href="#about" class="button button-outline">
-                    Discover VERDANEX
-                </a>
             </div>
         </section>
 
         <!-- ABOUT -->
         <section id="about">
-            <div class="section-heading">
-                <h2>About <span class="green">VERDANEX</span></h2>
-                <p>Innovation inspired by nature and driven by technology.</p>
-            </div>
+            <div class="container about-grid">
 
-            <div class="about-content">
-                <p>
-                    VERDANEX is a green technology innovation initiative
-                    focused on exploring practical ideas for environmental
-                    sustainability and smart agriculture. Through technology,
-                    research and experimentation, VERDANEX aims to contribute
-                    to solutions for real-world environmental challenges.
-                </p>
+                <div class="about-copy">
+                    <span class="section-label">About VERDANEX</span>
+
+                    <h2>
+                        Where Green Ideas Meet
+                        <span class="highlight">Innovation.</span>
+                    </h2>
+
+                    <p>
+                        VERDANEX is a green innovation initiative focused on
+                        exploring technology-driven approaches to
+                        sustainability and smart agriculture.
+                    </p>
+
+                    <p>
+                        Through project development, research and
+                        experimentation, VERDANEX explores ideas that
+                        could contribute to environmental sustainability.
+                    </p>
+
+                    <a class="button button-primary" href="#contact">
+                        Connect with Us →
+                    </a>
+                </div>
+
+                <div class="about-panel">
+                    <h3>Our Areas of Interest</h3>
+
+                    <div class="focus-item">
+                        <div class="focus-icon" aria-hidden="true">🌱</div>
+                        <div>
+                            <h4>Green Technology</h4>
+                            <p>Exploring technology for environmental sustainability.</p>
+                        </div>
+                    </div>
+
+                    <div class="focus-item">
+                        <div class="focus-icon" aria-hidden="true">🌾</div>
+                        <div>
+                            <h4>Smart Agriculture</h4>
+                            <p>Investigating innovative plant-growing and monitoring concepts.</p>
+                        </div>
+                    </div>
+
+                    <div class="focus-item">
+                        <div class="focus-icon" aria-hidden="true">📡</div>
+                        <div>
+                            <h4>Connected Technology</h4>
+                            <p>Exploring IoT sensors and data-informed applications.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <!-- INNOVATION -->
-        <section id="innovation" class="soft-section">
-            <div class="section-heading">
-                <h2>Our <span class="green">Innovation Focus</span></h2>
-                <p>
-                    Connecting technology with sustainability and agriculture.
-                </p>
-            </div>
+        <section class="innovation-section" id="innovation">
+            <div class="container">
 
-            <div class="cards">
-                <article class="card">
-                    <div class="card-icon">🌱</div>
-                    <h3>Smart Agriculture</h3>
-                    <p>
-                        Exploring technology-supported approaches to plant
-                        monitoring, crop protection and controlled growing
-                        environments.
-                    </p>
-                </article>
+                <div class="section-heading">
+                    <span class="section-label">What We Explore</span>
 
-                <article class="card">
-                    <div class="card-icon">📡</div>
-                    <h3>Internet of Things</h3>
-                    <p>
-                        Exploring connected sensors and environmental data
-                        to support monitoring and informed decisions.
-                    </p>
-                </article>
+                    <h2 class="section-title">
+                        Ideas for a Better Future
+                    </h2>
 
-                <article class="card">
-                    <div class="card-icon">🌍</div>
-                    <h3>Green Technology</h3>
-                    <p>
-                        Exploring ideas that address environmental challenges
-                        through sustainable innovation.
+                    <p class="section-description">
+                        Exploring technologies and concepts that may help
+                        address sustainability challenges.
                     </p>
-                </article>
+                </div>
+
+                <div class="card-grid">
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🌿</div>
+                        <h3>Environmental Sustainability</h3>
+                        <p>
+                            Exploring ideas that promote environmental
+                            awareness and sustainable practices.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🌱</div>
+                        <h3>Smart Agriculture</h3>
+                        <p>
+                            Investigating technology-assisted approaches
+                            to plant growth and agricultural monitoring.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">💡</div>
+                        <h3>Technology & Innovation</h3>
+                        <p>
+                            Connecting computing, data and real-world
+                            sustainability challenges.
+                        </p>
+                    </article>
+
+                </div>
             </div>
         </section>
 
         <!-- HAZESHIELD -->
         <section id="hazeshield">
-            <div class="section-heading">
-                <h2>Featured Project: <span class="green">HazeShield</span></h2>
-                <p>
-                    Exploring smart agriculture solutions in response to
-                    haze and air-quality challenges.
-                </p>
-            </div>
+            <div class="container project-grid">
 
-            <div class="project-panel">
-                <h3>HazeShield Indoor Farm</h3>
+                <div class="project-visual">
+                    <div class="plant" aria-hidden="true">🌱</div>
+                    <h3>HazeShield</h3>
+                    <p>Exploring smart agriculture during haze conditions</p>
+                </div>
 
-                <p>
-                    HazeShield is a green technology and smart agriculture
-                    project concept focused on protecting plant-growing
-                    environments from challenges associated with haze.
-                    The project explores environmental monitoring and
-                    controlled growing conditions to support plant growth.
-                </p>
+                <div class="project-copy">
+                    <span class="section-label">Featured Project</span>
 
-                <p>Areas being explored include:</p>
+                    <h2>
+                        Introducing
+                        <span class="highlight">HazeShield</span>
+                    </h2>
 
-                <ul>
-                    <li>Air-quality and environmental monitoring.</li>
-                    <li>IoT sensors and environmental data collection.</li>
-                    <li>Controlled indoor growing environments.</li>
-                    <li>Technology-assisted observation of plant conditions.</li>
-                </ul>
+                    <p>
+                        HazeShield explores the challenges that haze and
+                        air pollution may create for plants and
+                        agricultural environments.
+                    </p>
 
-                <p>
-                    HazeShield is an innovation project under development.
-                    Its performance and effectiveness should be established
-                    through testing and evaluation.
-                </p>
+                    <p>
+                        The concept investigates environmental monitoring,
+                        connected sensors and controlled cultivation
+                        approaches to study plant-growing conditions
+                        during haze events.
+                    </p>
 
-                <a href="#ai" class="button">Explore Azri AI</a>
+                    <div class="tag-list">
+                        <span class="tag">Green Technology</span>
+                        <span class="tag">Smart Agriculture</span>
+                        <span class="tag">IoT Concepts</span>
+                        <span class="tag">Environmental Monitoring</span>
+                    </div>
+
+                    <a
+                        class="button button-primary"
+                        href="https://github.com/azridalimi/hazeshield-website"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View on GitHub ↗
+                    </a>
+                </div>
+
             </div>
         </section>
 
         <!-- AZRI AI -->
-        <section id="ai" class="ai-section">
-            <div class="section-heading">
-                <h2>Meet <span class="green">Azri AI</span></h2>
-                <p>
-                    An AI assistant integrated into the VERDANEX website.
-                </p>
-            </div>
+        <section class="ai-section" id="azri-ai">
+            <div class="container">
 
-            <p class="ai-note">
-                Explore questions and ideas related to VERDANEX,
-                HazeShield, green technology and smart agriculture.
-            </p>
+                <div class="section-heading">
+                    <span class="section-label">AI Experimentation</span>
 
-            <iframe
-                class="ai-frame"
-                src="https://azri-ai.onrender.com/"
-                title="Azri AI Assistant"
-                loading="lazy"
-                allow="clipboard-write"
-            ></iframe>
+                    <h2 class="section-title">Meet Azri AI</h2>
 
-            <p class="ai-fallback">
-                If Azri AI does not load here,
-                <a
-                    href="https://azri-ai.onrender.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >open Azri AI in a new tab</a>.
-            </p>
-        </section>
+                    <p class="section-description">
+                        Explore Azri AI, an interactive assistant project
+                        created during the journey into artificial
+                        intelligence and application development.
+                    </p>
+                </div>
 
-        <!-- UTM ASCEND 2030 -->
-        <section id="partners">
-            <div class="section-heading">
-                <h2>Innovation &amp; <span class="green">Collaboration</span></h2>
-                <p>
-                    Building connections through innovation and sustainability.
-                </p>
-            </div>
+                <div class="ai-panel">
+                    <iframe
+                        class="ai-frame"
+                        src="https://azri-ai.onrender.com/"
+                        title="Azri AI application"
+                        loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                    ></iframe>
 
-            <div class="partner-card">
-                <img
-                    class="utm-logo"
-                    src="./images/New%20UTM%20ASCEND2030%20COL.png"
-                    alt="UTM ASCEND 2030"
-                    loading="lazy"
-                >
+                    <p class="ai-note">
+                        If Azri AI cannot load inside this page, open
+                        the application directly.
+                    </p>
 
-                <p class="partner-caption">UTM ASCEND 2030</p>
+                    <a
+                        class="button button-secondary ai-open"
+                        href="https://azri-ai.onrender.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Open Azri AI ↗
+                    </a>
+                </div>
+
             </div>
         </section>
 
-        <!-- PROJECT LINK -->
-        <section id="contact" class="contact">
-            <div class="section-heading">
-                <h2>Building a <span class="green">Greener Tomorrow</span></h2>
+        <!-- COLLABORATION -->
+        <section id="collaboration">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">Collaboration</span>
+
+                    <h2 class="section-title">
+                        Connecting Ideas and Opportunities
+                    </h2>
+
+                    <p class="section-description">
+                        Learning and knowledge sharing can help turn
+                        innovative ideas into meaningful opportunities.
+                    </p>
+                </div>
+
+                <div class="collab-card">
+
+                    <div class="collab-logo">
+                        <img
+                            src="./images/New%20UTM%20ASCEND2030%20COL.png"
+                            alt="UTM ASCEND 2030 logo"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="collab-copy">
+                        <span class="section-label">Institutional Connection</span>
+
+                        <h3>UTM ASCEND 2030</h3>
+
+                        <p>
+                            This section features the UTM ASCEND 2030
+                            identity in connection with the innovation
+                            journey. Refer to the relevant programme
+                            or institution for official partnership details.
+                        </p>
+                    </div>
+
+                </div>
             </div>
+        </section>
 
-            <p>
-                Follow the development of VERDANEX and its green technology
-                innovation projects through project updates and development.
-            </p>
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="container">
+                <div class="contact-panel">
 
-            <a
-                class="button"
-                href="https://github.com/azridalimi/hazeshield-website"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Project on GitHub
-            </a>
+                    <h2>Let's Build Greener Ideas.</h2>
+
+                    <p>
+                        Interested in green technology, smart agriculture
+                        or innovative project concepts? Explore the
+                        repository and follow the development journey.
+                    </p>
+
+                    <div class="button-group" style="justify-content:center;">
+                        <a
+                            class="button"
+                            href="https://github.com/azridalimi"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Explore GitHub ↗
+                        </a>
+
+                        <a
+                            class="button"
+                            href="https://www.linkedin.com/in/muhammad-azri-224b6241a/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Connect on LinkedIn ↗
+                        </a>
+                    </div>
+
+                </div>
+            </div>
         </section>
 
     </main>
 
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 VERDANEX | Green Technology &amp; Smart Agriculture</p>
-        <p>Innovating for a greener future.</p>
+        <div class="container footer-inner">
+
+            <p>
+                © <span id="currentYear"></span> VERDANEX.
+                Green ideas, meaningful innovation.
+            </p>
+
+            <div class="footer-links">
+                <a href="#home">Back to Top ↑</a>
+
+                <a
+                    href="https://github.com/azridalimi/hazeshield-website"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Website Repository
+                </a>
+            </div>
+
+        </div>
     </footer>
+
+    <script>
+        // Mobile navigation
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", function () {
+            const isOpen = navLinks.classList.toggle("open");
+
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close menu" : "Open menu"
+            );
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+        });
+
+        // Close menu after choosing a section
+        navLinks.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open menu");
+                menuToggle.textContent = "☰";
+            });
+        });
+
+        // Current year in footer
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+    </script>
 
 </body>
 </html>
