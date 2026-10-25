@@ -3,38 +3,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>VERDANEX | Green Technology & Smart Agriculture</title>
+    <title>VERDANEX | Future of Green Innovation</title>
 
-    <meta name="description" content="VERDANEX explores green technology, smart agriculture, IoT and HazeShield innovation for a more sustainable future.">
-    <meta name="keywords" content="VERDANEX, HazeShield, Green Technology, Smart Agriculture, IoT, Sustainability">
-    <meta name="author" content="VERDANEX">
-    <meta name="theme-color" content="#071b16">
+    <meta name="description" content="Discover VERDANEX, green technology innovation, HazeShield smart agriculture, IoT environmental monitoring and sustainable solutions.">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- FAVICON: LOGO VERDANEX TANPA TAGLINE -->
-    <!-- Pastikan nama fail ini sama dengan fail logo tanpa tagline -->
+    <!-- Tukar nama fail di bawah jika nama fail sebenar berbeza -->
     <link rel="icon" type="image/png"
-          href="./images/Verdanex%20Green%20Tech%20logo.png">
-    <link rel="shortcut icon" type="image/png"
-          href="./images/Verdanex%20Green%20Tech%20logo.png">
+          href="./images/Verdanex%20Green%20Tech%20logo.png?v=3">
+    <link rel="shortcut icon"
+          href="./images/Verdanex%20Green%20Tech%20logo.png?v=3">
 
     <style>
         :root {
-            --background: #071b16;
-            --surface: #0d281d;
-            --surface-light: #123726;
-            --green: #7ce6a0;
-            --green-bright: #64d98b;
-            --text: #edf8f0;
-            --muted: #bfd7c7;
-            --border: rgba(124, 230, 160, 0.22);
+            --green: #16834a;
+            --green-dark: #105b35;
+            --green-light: #eaf7ee;
+            --text: #20352a;
+            --muted: #637368;
+            --white: #ffffff;
+            --border: #dce9df;
         }
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
         html {
@@ -44,7 +41,7 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: var(--background);
+            background: var(--white);
             color: var(--text);
             line-height: 1.7;
         }
@@ -55,23 +52,22 @@
         }
 
         img {
-            display: block;
             max-width: 100%;
         }
 
-        /* HEADER */
+        /* NAVIGATION */
         .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 24px;
-            padding: 15px 7%;
-            background: rgba(7, 27, 22, 0.97);
-            border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
             z-index: 100;
-            backdrop-filter: blur(12px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            padding: 14px 7%;
+            background: rgba(255, 255, 255, 0.97);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 3px 15px rgba(20, 70, 40, 0.04);
         }
 
         .brand {
@@ -80,9 +76,10 @@
             flex-shrink: 0;
         }
 
-        /* LOGO 1: VERDANEX DENGAN TAGLINE */
+        /* LOGO DENGAN TAGLINE PADA WEBSITE */
         .brand-logo {
-            width: 200px;
+            display: block;
+            width: 220px;
             height: auto;
             object-fit: contain;
         }
@@ -90,14 +87,14 @@
         .nav-links {
             display: flex;
             align-items: center;
-            justify-content: center;
             flex-wrap: wrap;
             gap: 20px;
         }
 
         .nav-links a {
+            color: #415548;
             font-size: 14px;
-            color: var(--muted);
+            font-weight: 600;
             transition: color 0.2s;
         }
 
@@ -107,43 +104,42 @@
 
         /* HERO */
         .hero {
-            min-height: 570px;
-            display: flex;
-            align-items: center;
-            padding: 85px 8%;
+            position: relative;
+            overflow: hidden;
+            padding: 100px 8%;
             background:
                 radial-gradient(
-                    circle at 80% 20%,
-                    rgba(42, 160, 91, 0.22),
-                    transparent 36%
+                    circle at 85% 15%,
+                    rgba(90, 190, 115, 0.16),
+                    transparent 35%
                 ),
-                linear-gradient(
-                    135deg,
-                    #071b16,
-                    #103c2a 58%,
-                    #071b16
-                );
+                linear-gradient(135deg, #f5fbf6, #e8f6ec);
         }
 
         .hero-content {
-            max-width: 900px;
+            max-width: 850px;
         }
 
         .eyebrow {
             display: inline-block;
             padding: 7px 14px;
-            border: 1px solid #399b65;
             border-radius: 30px;
-            color: var(--green);
+            border: 1px solid #b8dfc4;
+            background: #ffffff;
+            color: var(--green-dark);
             font-size: 12px;
-            letter-spacing: 2px;
-            margin-bottom: 24px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            margin-bottom: 23px;
         }
 
         .hero h1 {
-            font-size: clamp(38px, 6vw, 70px);
+            max-width: 800px;
+            font-size: clamp(40px, 6vw, 68px);
             line-height: 1.12;
+            letter-spacing: -1.5px;
             margin-bottom: 24px;
+            color: #193d29;
         }
 
         .hero h1 span {
@@ -151,37 +147,36 @@
         }
 
         .hero p {
-            color: var(--muted);
+            max-width: 700px;
             font-size: 17px;
-            max-width: 720px;
+            color: #586d60;
             margin-bottom: 30px;
         }
 
         .button {
             display: inline-block;
-            padding: 12px 23px;
-            border-radius: 8px;
-            background: var(--green-bright);
-            color: #062116;
-            font-weight: bold;
             margin: 5px 8px 5px 0;
+            padding: 12px 22px;
+            border: 1px solid var(--green);
+            border-radius: 8px;
+            background: var(--green);
+            color: #ffffff;
+            font-weight: bold;
             transition: 0.2s;
         }
 
         .button:hover {
-            background: #a1f2b8;
+            background: var(--green-dark);
             transform: translateY(-2px);
         }
 
         .button-outline {
-            background: transparent;
-            border: 1px solid var(--green-bright);
-            color: var(--green);
+            background: #ffffff;
+            color: var(--green-dark);
         }
 
         .button-outline:hover {
-            background: var(--green-bright);
-            color: #062116;
+            color: #ffffff;
         }
 
         /* SECTIONS */
@@ -190,19 +185,19 @@
         }
 
         .section-heading {
+            max-width: 780px;
             text-align: center;
-            margin-bottom: 42px;
+            margin: 0 auto 42px;
         }
 
         .section-heading h2 {
-            font-size: clamp(28px, 4vw, 42px);
+            font-size: clamp(29px, 4vw, 42px);
             line-height: 1.25;
-            margin-bottom: 13px;
+            color: #193d29;
+            margin-bottom: 14px;
         }
 
         .section-heading p {
-            max-width: 720px;
-            margin: auto;
             color: var(--muted);
         }
 
@@ -220,41 +215,37 @@
         }
 
         /* INNOVATION CARDS */
-        .innovation-section,
-        .partners-section {
-            background: #0b241b;
+        .soft-section {
+            background: #f6faf7;
         }
 
         .cards {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 22px;
+            gap: 23px;
         }
 
         .card {
             padding: 28px;
+            background: #ffffff;
             border: 1px solid var(--border);
-            border-radius: 16px;
-            background: linear-gradient(
-                145deg,
-                rgba(24, 70, 48, 0.75),
-                rgba(10, 34, 25, 0.95)
-            );
-            transition: transform 0.2s, border-color 0.2s;
+            border-radius: 15px;
+            box-shadow: 0 8px 28px rgba(30, 80, 45, 0.045);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .card:hover {
             transform: translateY(-4px);
-            border-color: var(--green);
+            box-shadow: 0 12px 30px rgba(30, 80, 45, 0.09);
         }
 
         .card-icon {
-            font-size: 32px;
+            font-size: 31px;
             margin-bottom: 12px;
         }
 
         .card h3 {
-            color: var(--green);
+            color: var(--green-dark);
             margin-bottom: 12px;
         }
 
@@ -268,26 +259,27 @@
             max-width: 1000px;
             margin: auto;
             padding: 36px;
-            border-radius: 18px;
+            border-radius: 17px;
             border: 1px solid var(--border);
-            background: var(--surface);
+            background: #ffffff;
+            box-shadow: 0 10px 35px rgba(30, 80, 45, 0.06);
         }
 
         .project-panel h3 {
+            color: var(--green-dark);
             font-size: 28px;
-            color: var(--green);
             margin-bottom: 15px;
         }
 
         .project-panel p {
             color: var(--muted);
-            margin-bottom: 16px;
+            margin-bottom: 15px;
         }
 
         .project-panel ul {
-            padding-left: 24px;
-            color: var(--muted);
+            padding-left: 23px;
             margin-bottom: 20px;
+            color: var(--muted);
         }
 
         .project-panel li {
@@ -296,20 +288,14 @@
 
         /* AZRI AI */
         .ai-section {
-            background:
-                radial-gradient(
-                    circle at top right,
-                    rgba(38, 131, 77, 0.15),
-                    transparent 35%
-                ),
-                var(--background);
+            background: #f5faf6;
         }
 
         .ai-note {
-            max-width: 850px;
+            max-width: 800px;
             margin: 0 auto 25px;
-            color: var(--muted);
             text-align: center;
+            color: var(--muted);
         }
 
         .ai-frame {
@@ -319,25 +305,34 @@
             border: 1px solid var(--border);
             border-radius: 15px;
             background: #ffffff;
+            box-shadow: 0 8px 28px rgba(30, 80, 45, 0.06);
         }
 
         .ai-fallback {
-            text-align: center;
             margin-top: 20px;
+            text-align: center;
             color: var(--muted);
         }
 
-        /* LOGO UTM */
+        .ai-fallback a {
+            color: var(--green);
+            font-weight: bold;
+        }
+
+        /* UTM LOGO */
         .partner-card {
-            max-width: 700px;
+            max-width: 720px;
             margin: auto;
             padding: 30px;
             text-align: center;
-            background: #ffffff;
+            border: 1px solid var(--border);
             border-radius: 16px;
+            background: #ffffff;
+            box-shadow: 0 8px 28px rgba(30, 80, 45, 0.05);
         }
 
         .utm-logo {
+            display: block;
             width: min(100%, 500px);
             max-height: 240px;
             object-fit: contain;
@@ -345,64 +340,66 @@
         }
 
         .partner-caption {
-            color: #163626;
+            color: var(--green-dark);
             font-weight: bold;
         }
 
         /* CONTACT */
         .contact {
             text-align: center;
+            background: var(--green-light);
         }
 
         .contact p {
-            color: var(--muted);
             max-width: 720px;
             margin: 0 auto 22px;
+            color: var(--muted);
         }
 
         /* FOOTER */
         footer {
             padding: 28px 7%;
             text-align: center;
-            background: #04110d;
-            border-top: 1px solid var(--border);
-            color: #9eb8a8;
+            background: #103d28;
+            color: #e7f5eb;
             font-size: 13px;
         }
 
         footer p + p {
             margin-top: 5px;
+            color: #b9d9c3;
         }
 
         /* MOBILE */
         @media (max-width: 900px) {
             .navbar {
                 flex-direction: column;
+                gap: 12px;
             }
 
             .brand-logo {
-                width: 190px;
+                width: 200px;
             }
 
             .nav-links {
-                gap: 12px 18px;
+                justify-content: center;
+                gap: 12px 17px;
             }
 
             .cards {
                 grid-template-columns: 1fr;
             }
 
-            .hero {
-                min-height: auto;
-                padding: 75px 7%;
-            }
-
             section {
                 padding: 58px 6%;
             }
 
+            .hero {
+                padding: 75px 7%;
+            }
+
             .project-panel {
-                padding: 24px;
+                padding: 25px;
             }
 
             .ai-frame {
@@ -412,7 +409,7 @@
 
         @media (max-width: 480px) {
             .brand-logo {
-                width: 170px;
+                width: 180px;
             }
 
             .nav-links a {
@@ -420,11 +417,7 @@
             }
 
             .hero h1 {
-                font-size: 39px;
-            }
-
-            .button {
-                display: inline-block;
+                font-size: 40px;
             }
 
             .ai-frame {
@@ -438,11 +431,11 @@
 
     <!-- HEADER: LOGO VERDANEX DENGAN TAGLINE -->
     <header class="navbar">
-        <a class="brand" href="#home" aria-label="VERDANEX home">
+        <a class="brand" href="#home" aria-label="VERDANEX Home">
             <img
                 class="brand-logo"
                 src="./images/Verdanex%20Green%20Innovation%20Branding.png"
-                alt="VERDANEX Green Innovation with tagline"
+                alt="VERDANEX Green Innovation"
             >
         </a>
 
@@ -472,7 +465,7 @@
 
                 <p>
                     VERDANEX explores sustainable technology and innovative
-                    solutions to support smarter agriculture, environmental
+                    ideas to support smarter agriculture, environmental
                     monitoring and a more sustainable future.
                 </p>
 
@@ -486,13 +479,11 @@
             </div>
         </section>
 
-        <!-- ABOUT VERDANEX -->
+        <!-- ABOUT -->
         <section id="about">
             <div class="section-heading">
                 <h2>About <span class="green">VERDANEX</span></h2>
-                <p>
-                    Innovation inspired by nature and driven by technology.
-                </p>
+                <p>Innovation inspired by nature and driven by technology.</p>
             </div>
 
             <div class="about-content">
@@ -507,7 +498,7 @@
         </section>
 
         <!-- INNOVATION -->
-        <section id="innovation" class="innovation-section">
+        <section id="innovation" class="soft-section">
             <div class="section-heading">
                 <h2>Our <span class="green">Innovation Focus</span></h2>
                 <p>
@@ -546,7 +537,7 @@
             </div>
         </section>
 
-        <!-- HAZESHIELD PROJECT -->
+        <!-- HAZESHIELD -->
         <section id="hazeshield">
             <div class="section-heading">
                 <h2>Featured Project: <span class="green">HazeShield</span></h2>
@@ -582,13 +573,11 @@
                     through testing and evaluation.
                 </p>
 
-                <a href="#ai" class="button">
-                    Explore Azri AI
-                </a>
+                <a href="#ai" class="button">Explore Azri AI</a>
             </div>
         </section>
 
-        <!-- AZRI AI INTEGRATION -->
+        <!-- AZRI AI -->
         <section id="ai" class="ai-section">
             <div class="section-heading">
                 <h2>Meet <span class="green">Azri AI</span></h2>
@@ -616,15 +605,12 @@
                     href="https://azri-ai.onrender.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="green"
-                >
-                    open Azri AI in a new tab
-                </a>.
+                >open Azri AI in a new tab</a>.
             </p>
         </section>
 
-        <!-- PARTNER: UTM ASCEND 2030 -->
-        <section id="partners" class="partners-section">
+        <!-- UTM ASCEND 2030 -->
+        <section id="partners">
             <div class="section-heading">
                 <h2>Innovation &amp; <span class="green">Collaboration</span></h2>
                 <p>
@@ -636,7 +622,7 @@
                 <img
                     class="utm-logo"
                     src="./images/New%20UTM%20ASCEND2030%20COL.png"
-                    alt="UTM ASCEND 2030 logo"
+                    alt="UTM ASCEND 2030"
                     loading="lazy"
                 >
 
@@ -644,7 +630,7 @@
             </div>
         </section>
 
-        <!-- CONTACT / PROJECT LINK -->
+        <!-- PROJECT LINK -->
         <section id="contact" class="contact">
             <div class="section-heading">
                 <h2>Building a <span class="green">Greener Tomorrow</span></h2>
@@ -652,8 +638,7 @@
 
             <p>
                 Follow the development of VERDANEX and its green technology
-                innovation projects through project updates and open-source
-                development.
+                innovation projects through project updates and development.
             </p>
 
             <a
@@ -668,11 +653,8 @@
 
     </main>
 
-    <!-- FOOTER -->
     <footer>
-        <p>
-            &copy; 2026 VERDANEX | Green Technology &amp; Smart Agriculture
-        </p>
+        <p>&copy; 2026 VERDANEX | Green Technology &amp; Smart Agriculture</p>
         <p>Innovating for a greener future.</p>
     </footer>
 
