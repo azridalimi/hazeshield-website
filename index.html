@@ -1,721 +1,680 @@
 
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="VERDANEX — Green Innovation for a Sustainable Future. HazeShield meneroka jerebu, kualiti udara, kesihatan tanaman, IoT dan AI.">
-  <meta name="theme-color" content="#123c2a">
-
-  <title>VERDANEX | GREEN TECH</title>
-
-  <!-- Ikon tab browser menggunakan logo VERDANEX -->
-  <link rel="icon" type="image/png"
-      href="images/Verdanex%20Green%20Tech%20logo.png">
-
-  <style>
-    :root {
-      --green: #16834a;
-      --dark: #123c2a;
-      --light: #eaf6ec;
-      --text: #183629;
-      --muted: #65766c;
-      --border: #dce9df;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 100px;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: #fff;
-      line-height: 1.7;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-    }
-
-    /* NAVIGATION */
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 12px 6%;
-      background: #fff;
-      box-shadow: 0 3px 16px #123c2a12;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-shrink: 0;
-      color: var(--dark);
-    }
-
-    .brand img {
-      width: 155px;
-      height: 58px;
-      object-fit: contain;
-    }
-
-    .brand span {
-      font-size: 1.1rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .nav-links a {
-      color: var(--text);
-      font-size: .92rem;
-      font-weight: 600;
-    }
-
-    .nav-links a:hover {
-      color: var(--green);
-    }
-
-    .nav-links .nav-ai {
-      padding: 9px 15px;
-      color: white;
-      background: var(--green);
-      border-radius: 8px;
-    }
-
-    /* HERO */
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      align-items: center;
-      gap: 45px;
-      padding: 85px 7%;
-      background: linear-gradient(135deg, #e8f6e9, #f8fbf5);
-    }
-
-    .eyebrow {
-      color: var(--green);
-      font-size: .8rem;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin: 18px 0;
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
-      line-height: 1.12;
-      letter-spacing: -1.5px;
-    }
-
-    h2 {
-      margin: 12px 0 18px;
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      line-height: 1.25;
-    }
-
-    .hero p,
-    .intro {
-      max-width: 660px;
-      color: var(--muted);
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 21px;
-      color: white;
-      background: var(--green);
-      border-radius: 9px;
-      font-weight: 700;
-      transition: .2s;
-    }
-
-    .btn:hover {
-      background: #106b3b;
-      transform: translateY(-2px);
-    }
-
-    .btn.secondary {
-      color: var(--green);
-      background: white;
-      border: 1px solid #c9dfcd;
-    }
-
-    .hero-visual {
-      display: flex;
-      min-height: 310px;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 30px;
-      color: var(--dark);
-      text-align: center;
-      background: linear-gradient(145deg, #d6f0d7, #4c9c68);
-      border-radius: 26px;
-      box-shadow: 0 20px 50px #236c3c20;
-    }
-
-    .hero-visual .plant {
-      font-size: 6rem;
-      line-height: 1.3;
-    }
-
-    .hero-visual strong {
-      font-size: 1.3rem;
-    }
-
-    /* SECTIONS */
-
-    section {
-      padding: 75px 7%;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    .center .intro {
-      margin: 0 auto;
-    }
-
-    .soft {
-      background: #f3f8f3;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 38px;
-    }
-
-    .card {
-      padding: 27px;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 17px;
-      transition: .2s;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 28px #123c2a12;
-    }
-
-    .emoji {
-      margin-bottom: 12px;
-      font-size: 2.3rem;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 1.15rem;
-    }
-
-    .card p,
-    .focus-panel p {
-      color: var(--muted);
-      font-size: .95rem;
-    }
-
-    .focus-panel {
-      margin-top: 35px;
-      padding: 30px;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-    }
-
-    /* HAZESHIELD AI */
-
-    .ai-section {
-      background: linear-gradient(180deg, #f0f8f0, #fff);
-    }
-
-    .ai-panel {
-      max-width: 1050px;
-      margin: 32px auto 0;
-      overflow: hidden;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      box-shadow: 0 16px 40px #123c2a17;
-    }
-
-    .ai-heading {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      padding: 23px 26px;
-      color: white;
-      background: var(--dark);
-    }
-
-    .ai-icon {
-      display: flex;
-      width: 49px;
-      height: 49px;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      background: #245b3e;
-      border-radius: 14px;
-      font-size: 1.8rem;
-    }
-
-    .ai-heading h3 {
-      font-size: 1.2rem;
-    }
-
-    .ai-heading p {
-      color: #d6e9dc;
-      font-size: .88rem;
-    }
-
-    .ai-content {
-      padding: 24px;
-    }
-
-    .ai-content > p {
-      margin-bottom: 18px;
-      color: var(--muted);
-    }
-
-    .ai-frame {
-      width: 100%;
-      overflow: hidden;
-      background: #f8fbf8;
-      border: 1px solid var(--border);
-      border-radius: 13px;
-    }
-
-    .ai-frame iframe {
-      display: block;
-      width: 100%;
-      height: 650px;
-      border: 0;
-      background: white;
-    }
-
-    .notice {
-      margin-top: 18px;
-      padding: 13px 16px;
-      color: #4c6653;
-      background: #f1f7ee;
-      border-radius: 9px;
-      font-size: .88rem;
-    }
-
-    /* LOGOS */
-
-    .branding {
-      padding-top: 55px;
-      padding-bottom: 55px;
-      background: white;
-    }
-
-    .branding .intro {
-      margin: 0 auto 32px;
-      text-align: center;
-    }
-
-    .logo-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      align-items: center;
-      gap: 25px;
-      margin-top: 30px;
-    }
-
-    .logo-card {
-      display: flex;
-      min-height: 170px;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-    }
-
-    .logo-card img {
-      display: block;
-      width: 100%;
-      max-width: 480px;
-      max-height: 145px;
-      object-fit: contain;
-    }
-
-    .logo-caption {
-      margin-top: 10px;
-      color: var(--muted);
-      text-align: center;
-      font-size: .85rem;
-    }
-
-    /* FOOTER */
-
-    footer {
-      padding: 38px 7% 25px;
-      color: #e4f0e6;
-      background: #102b20;
-      text-align: center;
-    }
-
-    .footer-brand {
-      margin-bottom: 8px;
-      font-size: 1.5rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-
-    footer p {
-      margin: 5px 0;
-      color: #d0e0d4;
-      font-size: .92rem;
-    }
-
-    .footer-line {
-      max-width: 850px;
-      height: 1px;
-      margin: 22px auto;
-      background: #315342;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 850px) {
-      nav {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .nav-links {
-        justify-content: center;
-        gap: 13px;
-      }
-
-      .nav-links a {
-        font-size: .85rem;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        padding: 60px 6%;
-      }
-
-      .hero-visual {
-        min-height: 220px;
-      }
-
-      section {
-        padding: 58px 6%;
-      }
-
-      .cards,
-      .logo-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .brand img {
-        width: 125px;
-        height: 50px;
-      }
-
-      .ai-frame iframe {
-        height: 600px;
-      }
-    }
-
-    @media (max-width: 420px) {
-      .brand {
-        gap: 8px;
-      }
-
-      .brand img {
-        width: 105px;
-      }
-
-      .ai-content {
-        padding: 14px;
-      }
-
-      .ai-frame iframe {
-        height: 580px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VERDANEX | Green Technology & Smart Agriculture</title>
+
+    <meta name="description" content="VERDANEX explores green technology, smart agriculture, IoT and HazeShield innovation for a more sustainable future.">
+    <meta name="keywords" content="VERDANEX, HazeShield, Green Technology, Smart Agriculture, IoT, Sustainability">
+    <meta name="author" content="VERDANEX">
+    <meta name="theme-color" content="#071b16">
+
+    <!-- FAVICON: LOGO VERDANEX TANPA TAGLINE -->
+    <!-- Pastikan nama fail ini sama dengan fail logo tanpa tagline -->
+    <link rel="icon" type="image/png"
+          href="./images/Verdanex%20Green%20Tech%20logo.png">
+    <link rel="shortcut icon" type="image/png"
+          href="./images/Verdanex%20Green%20Tech%20logo.png">
+
+    <style>
+        :root {
+            --background: #071b16;
+            --surface: #0d281d;
+            --surface-light: #123726;
+            --green: #7ce6a0;
+            --green-bright: #64d98b;
+            --text: #edf8f0;
+            --muted: #bfd7c7;
+            --border: rgba(124, 230, 160, 0.22);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        /* HEADER */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 15px 7%;
+            background: rgba(7, 27, 22, 0.97);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        /* LOGO 1: VERDANEX DENGAN TAGLINE */
+        .brand-logo {
+            width: 200px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            color: var(--muted);
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--green);
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 570px;
+            display: flex;
+            align-items: center;
+            padding: 85px 8%;
+            background:
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(42, 160, 91, 0.22),
+                    transparent 36%
+                ),
+                linear-gradient(
+                    135deg,
+                    #071b16,
+                    #103c2a 58%,
+                    #071b16
+                );
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 7px 14px;
+            border: 1px solid #399b65;
+            border-radius: 30px;
+            color: var(--green);
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 70px);
+            line-height: 1.12;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 span {
+            color: var(--green);
+        }
+
+        .hero p {
+            color: var(--muted);
+            font-size: 17px;
+            max-width: 720px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 23px;
+            border-radius: 8px;
+            background: var(--green-bright);
+            color: #062116;
+            font-weight: bold;
+            margin: 5px 8px 5px 0;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #a1f2b8;
+            transform: translateY(-2px);
+        }
+
+        .button-outline {
+            background: transparent;
+            border: 1px solid var(--green-bright);
+            color: var(--green);
+        }
+
+        .button-outline:hover {
+            background: var(--green-bright);
+            color: #062116;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 78px 8%;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 42px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(28px, 4vw, 42px);
+            line-height: 1.25;
+            margin-bottom: 13px;
+        }
+
+        .section-heading p {
+            max-width: 720px;
+            margin: auto;
+            color: var(--muted);
+        }
+
+        .green {
+            color: var(--green);
+        }
+
+        /* ABOUT */
+        .about-content {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        /* INNOVATION CARDS */
+        .innovation-section,
+        .partners-section {
+            background: #0b241b;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: linear-gradient(
+                145deg,
+                rgba(24, 70, 48, 0.75),
+                rgba(10, 34, 25, 0.95)
+            );
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--green);
+        }
+
+        .card-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            color: var(--green);
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* HAZESHIELD */
+        .project-panel {
+            max-width: 1000px;
+            margin: auto;
+            padding: 36px;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+        }
+
+        .project-panel h3 {
+            font-size: 28px;
+            color: var(--green);
+            margin-bottom: 15px;
+        }
+
+        .project-panel p {
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        .project-panel ul {
+            padding-left: 24px;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .project-panel li {
+            margin-bottom: 8px;
+        }
+
+        /* AZRI AI */
+        .ai-section {
+            background:
+                radial-gradient(
+                    circle at top right,
+                    rgba(38, 131, 77, 0.15),
+                    transparent 35%
+                ),
+                var(--background);
+        }
+
+        .ai-note {
+            max-width: 850px;
+            margin: 0 auto 25px;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        .ai-frame {
+            display: block;
+            width: 100%;
+            height: 650px;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            background: #ffffff;
+        }
+
+        .ai-fallback {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--muted);
+        }
+
+        /* LOGO UTM */
+        .partner-card {
+            max-width: 700px;
+            margin: auto;
+            padding: 30px;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 16px;
+        }
+
+        .utm-logo {
+            width: min(100%, 500px);
+            max-height: 240px;
+            object-fit: contain;
+            margin: 0 auto 15px;
+        }
+
+        .partner-caption {
+            color: #163626;
+            font-weight: bold;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: var(--muted);
+            max-width: 720px;
+            margin: 0 auto 22px;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 28px 7%;
+            text-align: center;
+            background: #04110d;
+            border-top: 1px solid var(--border);
+            color: #9eb8a8;
+            font-size: 13px;
+        }
+
+        footer p + p {
+            margin-top: 5px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .brand-logo {
+                width: 190px;
+            }
+
+            .nav-links {
+                gap: 12px 18px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 75px 7%;
+            }
+
+            section {
+                padding: 58px 6%;
+            }
+
+            .project-panel {
+                padding: 24px;
+            }
+
+            .ai-frame {
+                height: 600px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand-logo {
+                width: 170px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 39px;
+            }
+
+            .button {
+                display: inline-block;
+            }
+
+            .ai-frame {
+                height: 550px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <a class="brand" href="#home" aria-label="VERDANEX Home">
-      <img
-        src="images/Verdanex%20Green%20Innovation%20Branding.png"
-        alt="Logo VERDANEX">
-      <span>VERDANEX</span>
-    </a>
+    <!-- HEADER: LOGO VERDANEX DENGAN TAGLINE -->
+    <header class="navbar">
+        <a class="brand" href="#home" aria-label="VERDANEX home">
+            <img
+                class="brand-logo"
+                src="./images/Verdanex%20Green%20Innovation%20Branding.png"
+                alt="VERDANEX Green Innovation with tagline"
+            >
+        </a>
 
-    <div class="nav-links">
-      <a href="#tentang">Tentang</a>
-      <a href="#teknologi">Teknologi</a>
-      <a href="#identiti">Identiti</a>
-      <a href="#ai" class="nav-ai">HazeShield AI ↗</a>
-    </div>
-  </nav>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#innovation">Innovation</a>
+            <a href="#hazeshield">HazeShield</a>
+            <a href="#ai">Azri AI</a>
+            <a href="#partners">Partners</a>
+        </nav>
+    </header>
 
-  <!-- HERO -->
-  <header class="hero" id="home">
-    <div>
-      <div class="eyebrow">Green Technology · Smart Agriculture</div>
-      <h1>Melindungi tanaman, memahami jerebu.</h1>
-      <p>
-        HazeShield ialah projek inovasi yang meneroka hubungan antara
-        jerebu, kualiti udara dan kesihatan tanaman melalui pemantauan
-        pintar, Internet of Things (IoT) dan kecerdasan buatan.
-      </p>
-      <div class="actions">
-        <a class="btn" href="#tentang">Terokai Projek</a>
-        <a class="btn secondary" href="#ai">Tanya HazeShield AI</a>
-      </div>
-    </div>
+    <main>
 
-    <div class="hero-visual">
-      <div class="plant">🌱</div>
-      <strong>Smart Agriculture</strong>
-      <span>Technology for a greener future</span>
-    </div>
-  </header>
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="eyebrow">
+                    GREEN TECHNOLOGY · SMART AGRICULTURE · IoT
+                </div>
 
-  <!-- ABOUT -->
-  <section id="tentang">
-    <div class="center">
-      <div class="eyebrow">Tentang Projek</div>
-      <h2>Apakah itu HazeShield?</h2>
-      <p class="intro">
-        HazeShield memfokuskan kepada kesan jerebu dan pencemaran udara
-        terhadap pelbagai jenis tanaman. Projek ini meneroka potensi
-        teknologi untuk membantu memahami keadaan persekitaran dan
-        menyokong keputusan penjagaan tanaman.
-      </p>
-    </div>
+                <h1>
+                    Innovating for a
+                    <span>Greener Future.</span>
+                </h1>
 
-    <div class="cards">
-      <article class="card">
-        <div class="emoji">🌫️</div>
-        <h3>Cabaran Jerebu</h3>
+                <p>
+                    VERDANEX explores sustainable technology and innovative
+                    solutions to support smarter agriculture, environmental
+                    monitoring and a more sustainable future.
+                </p>
+
+                <a href="#hazeshield" class="button">
+                    Explore HazeShield
+                </a>
+
+                <a href="#about" class="button button-outline">
+                    Discover VERDANEX
+                </a>
+            </div>
+        </section>
+
+        <!-- ABOUT VERDANEX -->
+        <section id="about">
+            <div class="section-heading">
+                <h2>About <span class="green">VERDANEX</span></h2>
+                <p>
+                    Innovation inspired by nature and driven by technology.
+                </p>
+            </div>
+
+            <div class="about-content">
+                <p>
+                    VERDANEX is a green technology innovation initiative
+                    focused on exploring practical ideas for environmental
+                    sustainability and smart agriculture. Through technology,
+                    research and experimentation, VERDANEX aims to contribute
+                    to solutions for real-world environmental challenges.
+                </p>
+            </div>
+        </section>
+
+        <!-- INNOVATION -->
+        <section id="innovation" class="innovation-section">
+            <div class="section-heading">
+                <h2>Our <span class="green">Innovation Focus</span></h2>
+                <p>
+                    Connecting technology with sustainability and agriculture.
+                </p>
+            </div>
+
+            <div class="cards">
+                <article class="card">
+                    <div class="card-icon">🌱</div>
+                    <h3>Smart Agriculture</h3>
+                    <p>
+                        Exploring technology-supported approaches to plant
+                        monitoring, crop protection and controlled growing
+                        environments.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">📡</div>
+                    <h3>Internet of Things</h3>
+                    <p>
+                        Exploring connected sensors and environmental data
+                        to support monitoring and informed decisions.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">🌍</div>
+                    <h3>Green Technology</h3>
+                    <p>
+                        Exploring ideas that address environmental challenges
+                        through sustainable innovation.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- HAZESHIELD PROJECT -->
+        <section id="hazeshield">
+            <div class="section-heading">
+                <h2>Featured Project: <span class="green">HazeShield</span></h2>
+                <p>
+                    Exploring smart agriculture solutions in response to
+                    haze and air-quality challenges.
+                </p>
+            </div>
+
+            <div class="project-panel">
+                <h3>HazeShield Indoor Farm</h3>
+
+                <p>
+                    HazeShield is a green technology and smart agriculture
+                    project concept focused on protecting plant-growing
+                    environments from challenges associated with haze.
+                    The project explores environmental monitoring and
+                    controlled growing conditions to support plant growth.
+                </p>
+
+                <p>Areas being explored include:</p>
+
+                <ul>
+                    <li>Air-quality and environmental monitoring.</li>
+                    <li>IoT sensors and environmental data collection.</li>
+                    <li>Controlled indoor growing environments.</li>
+                    <li>Technology-assisted observation of plant conditions.</li>
+                </ul>
+
+                <p>
+                    HazeShield is an innovation project under development.
+                    Its performance and effectiveness should be established
+                    through testing and evaluation.
+                </p>
+
+                <a href="#ai" class="button">
+                    Explore Azri AI
+                </a>
+            </div>
+        </section>
+
+        <!-- AZRI AI INTEGRATION -->
+        <section id="ai" class="ai-section">
+            <div class="section-heading">
+                <h2>Meet <span class="green">Azri AI</span></h2>
+                <p>
+                    An AI assistant integrated into the VERDANEX website.
+                </p>
+            </div>
+
+            <p class="ai-note">
+                Explore questions and ideas related to VERDANEX,
+                HazeShield, green technology and smart agriculture.
+            </p>
+
+            <iframe
+                class="ai-frame"
+                src="https://azri-ai.onrender.com/"
+                title="Azri AI Assistant"
+                loading="lazy"
+                allow="clipboard-write"
+            ></iframe>
+
+            <p class="ai-fallback">
+                If Azri AI does not load here,
+                <a
+                    href="https://azri-ai.onrender.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="green"
+                >
+                    open Azri AI in a new tab
+                </a>.
+            </p>
+        </section>
+
+        <!-- PARTNER: UTM ASCEND 2030 -->
+        <section id="partners" class="partners-section">
+            <div class="section-heading">
+                <h2>Innovation &amp; <span class="green">Collaboration</span></h2>
+                <p>
+                    Building connections through innovation and sustainability.
+                </p>
+            </div>
+
+            <div class="partner-card">
+                <img
+                    class="utm-logo"
+                    src="./images/New%20UTM%20ASCEND2030%20COL.png"
+                    alt="UTM ASCEND 2030 logo"
+                    loading="lazy"
+                >
+
+                <p class="partner-caption">UTM ASCEND 2030</p>
+            </div>
+        </section>
+
+        <!-- CONTACT / PROJECT LINK -->
+        <section id="contact" class="contact">
+            <div class="section-heading">
+                <h2>Building a <span class="green">Greener Tomorrow</span></h2>
+            </div>
+
+            <p>
+                Follow the development of VERDANEX and its green technology
+                innovation projects through project updates and open-source
+                development.
+            </p>
+
+            <a
+                class="button"
+                href="https://github.com/azridalimi/hazeshield-website"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Project on GitHub
+            </a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
         <p>
-          Meneroka bagaimana zarah pencemar dan pengurangan cahaya
-          matahari boleh mempengaruhi fotosintesis serta pertumbuhan tanaman.
+            &copy; 2026 VERDANEX | Green Technology &amp; Smart Agriculture
         </p>
-      </article>
-
-      <article class="card">
-        <div class="emoji">📡</div>
-        <h3>Pemantauan Pintar</h3>
-        <p>
-          Meneroka penggunaan sensor untuk memantau parameter kualiti udara
-          dan keadaan persekitaran tanaman.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="emoji">🌿</div>
-        <h3>Kesihatan Tanaman</h3>
-        <p>
-          Menyokong pemahaman tentang penjagaan sayur-sayuran, buah-buahan,
-          pokok, tanaman hiasan dan tanaman pertanian lain.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <!-- TECHNOLOGY -->
-  <section id="teknologi" class="soft">
-    <div class="center">
-      <div class="eyebrow">Pendekatan Teknologi</div>
-      <h2>Daripada data kepada pemahaman</h2>
-      <p class="intro">
-        HazeShield menggabungkan bidang teknologi yang berpotensi
-        menyokong pemantauan persekitaran dan pertanian pintar.
-      </p>
-    </div>
-
-    <div class="cards">
-      <article class="card">
-        <div class="emoji">🌡️</div>
-        <h3>Sensor Persekitaran</h3>
-        <p>
-          Sensor yang bersesuaian boleh digunakan untuk mengukur suhu,
-          kelembapan dan parameter kualiti udara.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="emoji">📶</div>
-        <h3>Internet of Things</h3>
-        <p>
-          IoT boleh membantu menghantar dan memaparkan bacaan sensor
-          apabila perkakasan dan sambungan tersedia.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="emoji">🤖</div>
-        <h3>Kecerdasan Buatan</h3>
-        <p>
-          HazeShield AI membantu menerangkan isu jerebu, tanaman,
-          kualiti udara dan teknologi pertanian pintar.
-        </p>
-      </article>
-    </div>
-
-    <div class="focus-panel">
-      <h3>🌍 Visi HazeShield</h3>
-      <p>
-        Meneroka penyelesaian teknologi yang membantu masyarakat memahami
-        kesan pencemaran udara terhadap tanaman serta menggalakkan
-        pertanian yang lebih bermaklumat dan mampan.
-      </p>
-    </div>
-  </section>
-
-  <!-- AI CHATBOT -->
-  <section id="ai" class="ai-section">
-    <div class="center">
-      <div class="eyebrow">Pembantu Maya</div>
-      <h2>Berkenalan dengan HazeShield AI</h2>
-      <p class="intro">
-        Tanya soalan tentang jerebu, kualiti udara, kesihatan tanaman,
-        sensor dan pertanian pintar.
-      </p>
-    </div>
-
-    <div class="ai-panel">
-      <div class="ai-heading">
-        <div class="ai-icon">🌱</div>
-        <div>
-          <h3>HazeShield AI</h3>
-          <p>Pembantu AI untuk kesihatan tanaman dan pertanian pintar</p>
-        </div>
-      </div>
-
-      <div class="ai-content">
-        <p>
-          Anda boleh bertanya dalam Bahasa Melayu tentang kesan jerebu,
-          fotosintesis, pemantauan kualiti udara, sensor dan IoT.
-        </p>
-
-        <div class="ai-frame">
-          <iframe
-            src="https://azri-ai.onrender.com/"
-            title="HazeShield AI Chatbot"
-            loading="lazy"
-            allow="clipboard-write">
-          </iframe>
-        </div>
-
-        <p class="notice">
-          Nota: Jawapan AI ialah panduan umum. Bacaan sensor sebenar
-          hanya akan dipaparkan apabila sistem sensor disambungkan.
-          Jika chatbot tidak dipaparkan di sini, buka
-          <a href="https://azri-ai.onrender.com/"
-             target="_blank"
-             rel="noopener noreferrer"
-             style="color:#16834a;font-weight:bold;">
-            HazeShield AI secara terus
-          </a>.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- BRANDING -->
-  <section id="identiti" class="branding">
-    <div class="center">
-      <div class="eyebrow">Identiti & Inovasi</div>
-      <h2>Inovasi untuk masa depan mampan</h2>
-      <p class="intro">
-        Identiti visual inovasi hijau dan ekosistem universiti.
-      </p>
-    </div>
-
-    <div class="logo-grid">
-      <div>
-        <div class="logo-card">
-          <img
-            src="images/Verdanex%20Green%20Innovation%20Branding.png"
-            alt="Logo VERDANEX — Green Innovation for a Sustainable Future"
-            loading="lazy">
-        </div>
-        <p class="logo-caption">VERDANEX · Green Innovation</p>
-      </div>
-
-      <div>
-        <div class="logo-card">
-          <img
-            src="images/New%20UTM%20ASCEND2030%20COL.png"
-            alt="Logo Universiti Teknologi Malaysia ASCEND 2030"
-            loading="lazy">
-        </div>
-        <p class="logo-caption">
-          Universiti Teknologi Malaysia · ASCEND 2030
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-brand">VERDANEX</div>
-    <p>Green Innovation for a Sustainable Future</p>
-    <p>HazeShield · Green Technology · Smart Agriculture · IoT · AI</p>
-    <div class="footer-line"></div>
-    <p>
-      Meneroka teknologi untuk pemantauan kualiti udara dan kesihatan tanaman.
-    </p>
-    <p>© <span id="year"></span> VERDANEX</p>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+        <p>Innovating for a greener future.</p>
+    </footer>
 
 </body>
 </html>
