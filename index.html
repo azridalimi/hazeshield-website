@@ -4,19 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="HazeShield ialah projek inovasi teknologi hijau yang meneroka jerebu, kualiti udara, kesihatan tanaman dan pertanian pintar menggunakan IoT dan AI.">
+  <meta name="description" content="VERDANEX — Green Innovation for a Sustainable Future. HazeShield meneroka jerebu, kualiti udara, kesihatan tanaman, IoT dan AI.">
   <meta name="theme-color" content="#123c2a">
 
-  <title>HazeShield | Green Innovation & Smart Agriculture</title>
+  <title>VERDANEX</title>
+
+  <!-- Ikon tab browser menggunakan logo VERDANEX -->
+  <link rel="icon" type="image/png"
+        href="images/Verdanex%20Green%20Innovation%20Branding.png">
 
   <style>
     :root {
       --green: #16834a;
-      --green-dark: #123c2a;
-      --green-light: #eaf6ec;
+      --dark: #123c2a;
+      --light: #eaf6ec;
       --text: #183629;
       --muted: #65766c;
-      --white: #ffffff;
       --border: #dce9df;
     }
 
@@ -28,13 +31,13 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 90px;
+      scroll-padding-top: 100px;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
-      background: var(--white);
+      background: #fff;
       line-height: 1.7;
     }
 
@@ -49,44 +52,48 @@
     /* NAVIGATION */
 
     nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-      padding: 14px 6%;
-      background: white;
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 3px 16px rgba(18, 60, 42, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 12px 6%;
+      background: #fff;
+      box-shadow: 0 3px 16px #123c2a12;
     }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 12px;
-      color: var(--green);
-      font-size: 1.3rem;
-      font-weight: 800;
       flex-shrink: 0;
+      color: var(--dark);
     }
 
-    .verdanex-logo {
+    .brand img {
       width: 155px;
-      height: 62px;
+      height: 58px;
       object-fit: contain;
+    }
+
+    .brand span {
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 1px;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      gap: 22px;
+      gap: 20px;
     }
 
     .nav-links a {
       color: var(--text);
-      font-size: 0.92rem;
+      font-size: .92rem;
       font-weight: 600;
     }
 
@@ -95,48 +102,48 @@
     }
 
     .nav-links .nav-ai {
+      padding: 9px 15px;
       color: white;
       background: var(--green);
-      padding: 9px 15px;
       border-radius: 8px;
     }
 
     /* HERO */
 
     .hero {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      align-items: center;
+      gap: 45px;
       padding: 85px 7%;
       background: linear-gradient(135deg, #e8f6e9, #f8fbf5);
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 45px;
-      align-items: center;
     }
 
     .eyebrow {
       color: var(--green);
-      font-size: 0.8rem;
+      font-size: .8rem;
       font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
 
     h1 {
+      margin: 18px 0;
       font-size: clamp(2.5rem, 5vw, 4.5rem);
       line-height: 1.12;
-      margin: 18px 0;
       letter-spacing: -1.5px;
     }
 
     h2 {
+      margin: 12px 0 18px;
       font-size: clamp(1.8rem, 3vw, 2.6rem);
       line-height: 1.25;
-      margin: 12px 0 18px;
     }
 
     .hero p,
     .intro {
-      color: var(--muted);
       max-width: 660px;
+      color: var(--muted);
     }
 
     .actions {
@@ -149,11 +156,11 @@
     .btn {
       display: inline-block;
       padding: 12px 21px;
-      border-radius: 9px;
-      background: var(--green);
       color: white;
+      background: var(--green);
+      border-radius: 9px;
       font-weight: 700;
-      transition: transform 0.2s, background 0.2s;
+      transition: .2s;
     }
 
     .btn:hover {
@@ -162,23 +169,23 @@
     }
 
     .btn.secondary {
-      background: white;
       color: var(--green);
+      background: white;
       border: 1px solid #c9dfcd;
     }
 
     .hero-visual {
-      min-height: 310px;
-      border-radius: 26px;
-      background: linear-gradient(145deg, #d6f0d7, #4c9c68);
       display: flex;
+      min-height: 310px;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      color: white;
-      text-align: center;
       padding: 30px;
-      box-shadow: 0 20px 50px rgba(35, 108, 60, 0.16);
+      color: var(--dark);
+      text-align: center;
+      background: linear-gradient(145deg, #d6f0d7, #4c9c68);
+      border-radius: 26px;
+      box-shadow: 0 20px 50px #236c3c20;
     }
 
     .hero-visual .plant {
@@ -188,15 +195,9 @@
 
     .hero-visual strong {
       font-size: 1.3rem;
-      color: var(--green-dark);
     }
 
-    .hero-visual span {
-      color: var(--green-dark);
-      font-size: 0.9rem;
-    }
-
-    /* GENERAL SECTIONS */
+    /* SECTIONS */
 
     section {
       padding: 75px 7%;
@@ -223,20 +224,20 @@
 
     .card {
       padding: 27px;
+      background: white;
       border: 1px solid var(--border);
       border-radius: 17px;
-      background: white;
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: .2s;
     }
 
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(18, 60, 42, 0.08);
+      box-shadow: 0 12px 28px #123c2a12;
     }
 
     .emoji {
-      font-size: 2.3rem;
       margin-bottom: 12px;
+      font-size: 2.3rem;
     }
 
     .card h3 {
@@ -244,12 +245,11 @@
       font-size: 1.15rem;
     }
 
-    .card p {
+    .card p,
+    .focus-panel p {
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: .95rem;
     }
-
-    /* PROJECT FOCUS */
 
     .focus-panel {
       margin-top: 35px;
@@ -259,45 +259,41 @@
       border-radius: 18px;
     }
 
-    .focus-panel p {
-      color: var(--muted);
-    }
-
-    /* AI CHATBOT */
+    /* HAZESHIELD AI */
 
     .ai-section {
-      background: linear-gradient(180deg, #f0f8f0, #ffffff);
+      background: linear-gradient(180deg, #f0f8f0, #fff);
     }
 
     .ai-panel {
       max-width: 1050px;
       margin: 32px auto 0;
+      overflow: hidden;
       background: white;
       border: 1px solid var(--border);
       border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 16px 40px rgba(18, 60, 42, 0.09);
+      box-shadow: 0 16px 40px #123c2a17;
     }
 
     .ai-heading {
-      padding: 23px 26px;
       display: flex;
       align-items: center;
       gap: 15px;
-      background: var(--green-dark);
+      padding: 23px 26px;
       color: white;
+      background: var(--dark);
     }
 
     .ai-icon {
+      display: flex;
       width: 49px;
       height: 49px;
-      border-radius: 14px;
-      background: #245b3e;
-      display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.8rem;
       flex-shrink: 0;
+      background: #245b3e;
+      border-radius: 14px;
+      font-size: 1.8rem;
     }
 
     .ai-heading h3 {
@@ -306,7 +302,7 @@
 
     .ai-heading p {
       color: #d6e9dc;
-      font-size: 0.88rem;
+      font-size: .88rem;
     }
 
     .ai-content {
@@ -314,16 +310,16 @@
     }
 
     .ai-content > p {
-      color: var(--muted);
       margin-bottom: 18px;
+      color: var(--muted);
     }
 
     .ai-frame {
       width: 100%;
       overflow: hidden;
+      background: #f8fbf8;
       border: 1px solid var(--border);
       border-radius: 13px;
-      background: #f8fbf8;
     }
 
     .ai-frame iframe {
@@ -337,46 +333,42 @@
     .notice {
       margin-top: 18px;
       padding: 13px 16px;
-      border-radius: 9px;
-      background: #f1f7ee;
       color: #4c6653;
-      font-size: 0.88rem;
+      background: #f1f7ee;
+      border-radius: 9px;
+      font-size: .88rem;
     }
 
-    /* BRANDING AND PARTNERSHIP */
+    /* LOGOS */
 
     .branding {
-      background: white;
       padding-top: 55px;
       padding-bottom: 55px;
-    }
-
-    .branding h2 {
-      text-align: center;
-      margin-bottom: 10px;
+      background: white;
     }
 
     .branding .intro {
-      text-align: center;
       margin: 0 auto 32px;
+      text-align: center;
     }
 
     .logo-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 25px;
       align-items: center;
+      gap: 25px;
+      margin-top: 30px;
     }
 
     .logo-card {
-      min-height: 170px;
-      padding: 24px;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      background: #fff;
       display: flex;
+      min-height: 170px;
       align-items: center;
       justify-content: center;
+      padding: 24px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
     }
 
     .logo-card img {
@@ -388,36 +380,37 @@
     }
 
     .logo-caption {
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.85rem;
       margin-top: 10px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .85rem;
     }
 
     /* FOOTER */
 
     footer {
-      background: #102b20;
-      color: #e4f0e6;
       padding: 38px 7% 25px;
+      color: #e4f0e6;
+      background: #102b20;
       text-align: center;
     }
 
     .footer-brand {
+      margin-bottom: 8px;
       font-size: 1.5rem;
       font-weight: 800;
-      margin-bottom: 8px;
+      letter-spacing: 1px;
     }
 
     footer p {
       margin: 5px 0;
       color: #d0e0d4;
-      font-size: 0.92rem;
+      font-size: .92rem;
     }
 
     .footer-line {
-      height: 1px;
       max-width: 850px;
+      height: 1px;
       margin: 22px auto;
       background: #315342;
     }
@@ -436,7 +429,7 @@
       }
 
       .nav-links a {
-        font-size: 0.85rem;
+        font-size: .85rem;
       }
 
       .hero {
@@ -452,15 +445,12 @@
         padding: 58px 6%;
       }
 
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
+      .cards,
       .logo-grid {
         grid-template-columns: 1fr;
       }
 
-      .verdanex-logo {
+      .brand img {
         width: 125px;
         height: 50px;
       }
@@ -472,10 +462,10 @@
 
     @media (max-width: 420px) {
       .brand {
-        font-size: 1.05rem;
+        gap: 8px;
       }
 
-      .verdanex-logo {
+      .brand img {
         width: 105px;
       }
 
@@ -494,19 +484,18 @@
 
   <!-- NAVIGATION -->
   <nav>
-    <a class="brand" href="#home" aria-label="HazeShield Home">
+    <a class="brand" href="#home" aria-label="VERDANEX Home">
       <img
         src="images/Verdanex%20Green%20Innovation%20Branding.png"
-        alt="VERDANEX Green Innovation for a Sustainable Future"
-        class="verdanex-logo">
-      <span>HazeShield</span>
+        alt="Logo VERDANEX">
+      <span>VERDANEX</span>
     </a>
 
     <div class="nav-links">
       <a href="#tentang">Tentang</a>
       <a href="#teknologi">Teknologi</a>
       <a href="#identiti">Identiti</a>
-      <a href="#ai" class="nav-ai">Tanya AI ↗</a>
+      <a href="#ai" class="nav-ai">HazeShield AI ↗</a>
     </div>
   </nav>
 
@@ -514,15 +503,12 @@
   <header class="hero" id="home">
     <div>
       <div class="eyebrow">Green Technology · Smart Agriculture</div>
-
       <h1>Melindungi tanaman, memahami jerebu.</h1>
-
       <p>
         HazeShield ialah projek inovasi yang meneroka hubungan antara
-        jerebu, kualiti udara dan kesihatan tanaman melalui pendekatan
-        pemantauan pintar, Internet of Things (IoT) dan kecerdasan buatan.
+        jerebu, kualiti udara dan kesihatan tanaman melalui pemantauan
+        pintar, Internet of Things (IoT) dan kecerdasan buatan.
       </p>
-
       <div class="actions">
         <a class="btn" href="#tentang">Terokai Projek</a>
         <a class="btn secondary" href="#ai">Tanya HazeShield AI</a>
@@ -585,7 +571,7 @@
       <div class="eyebrow">Pendekatan Teknologi</div>
       <h2>Daripada data kepada pemahaman</h2>
       <p class="intro">
-        HazeShield menggabungkan beberapa bidang teknologi yang berpotensi
+        HazeShield menggabungkan bidang teknologi yang berpotensi
         menyokong pemantauan persekitaran dan pertanian pintar.
       </p>
     </div>
@@ -605,7 +591,7 @@
         <h3>Internet of Things</h3>
         <p>
           IoT boleh membantu menghantar dan memaparkan bacaan sensor
-          apabila perkakasan dan sambungan telah tersedia.
+          apabila perkakasan dan sambungan tersedia.
         </p>
       </article>
 
@@ -613,7 +599,7 @@
         <div class="emoji">🤖</div>
         <h3>Kecerdasan Buatan</h3>
         <p>
-          HazeShield AI memberikan penerangan berkaitan jerebu, tanaman,
+          HazeShield AI membantu menerangkan isu jerebu, tanaman,
           kualiti udara dan teknologi pertanian pintar.
         </p>
       </article>
@@ -622,9 +608,9 @@
     <div class="focus-panel">
       <h3>🌍 Visi HazeShield</h3>
       <p>
-        Meneroka penyelesaian teknologi yang dapat membantu masyarakat
-        memahami kesan pencemaran udara terhadap tanaman dan menggalakkan
-        pendekatan pertanian yang lebih bermaklumat serta mampan.
+        Meneroka penyelesaian teknologi yang membantu masyarakat memahami
+        kesan pencemaran udara terhadap tanaman serta menggalakkan
+        pertanian yang lebih bermaklumat dan mampan.
       </p>
     </div>
   </section>
@@ -635,8 +621,8 @@
       <div class="eyebrow">Pembantu Maya</div>
       <h2>Berkenalan dengan HazeShield AI</h2>
       <p class="intro">
-        Ada soalan tentang jerebu, kualiti udara atau kesihatan tanaman?
-        Tanya HazeShield AI di bawah.
+        Tanya soalan tentang jerebu, kualiti udara, kesihatan tanaman,
+        sensor dan pertanian pintar.
       </p>
     </div>
 
@@ -665,11 +651,11 @@
         </div>
 
         <p class="notice">
-          Nota: Jawapan AI ialah panduan umum dan perlu dinilai mengikut
-          keadaan sebenar. Bacaan sensor sebenar hanya akan dipaparkan
-          apabila sistem sensor disambungkan.
-          Jika chatbot tidak dipaparkan, gunakan
-          <a href="https://azri-ai.onrender.com/" target="_blank"
+          Nota: Jawapan AI ialah panduan umum. Bacaan sensor sebenar
+          hanya akan dipaparkan apabila sistem sensor disambungkan.
+          Jika chatbot tidak dipaparkan di sini, buka
+          <a href="https://azri-ai.onrender.com/"
+             target="_blank"
              rel="noopener noreferrer"
              style="color:#16834a;font-weight:bold;">
             HazeShield AI secara terus
@@ -679,13 +665,13 @@
     </div>
   </section>
 
-  <!-- PROJECT BRANDING -->
+  <!-- BRANDING -->
   <section id="identiti" class="branding">
     <div class="center">
       <div class="eyebrow">Identiti & Inovasi</div>
       <h2>Inovasi untuk masa depan mampan</h2>
       <p class="intro">
-        Identiti visual berkaitan inovasi hijau dan ekosistem universiti.
+        Identiti visual inovasi hijau dan ekosistem universiti.
       </p>
     </div>
 
@@ -707,22 +693,23 @@
             alt="Logo Universiti Teknologi Malaysia ASCEND 2030"
             loading="lazy">
         </div>
-        <p class="logo-caption">Universiti Teknologi Malaysia · ASCEND 2030</p>
+        <p class="logo-caption">
+          Universiti Teknologi Malaysia · ASCEND 2030
+        </p>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-brand">🌿 HazeShield</div>
-    <p>Green Technology · Smart Agriculture · IoT · AI</p>
-
+    <div class="footer-brand">VERDANEX</div>
+    <p>Green Innovation for a Sustainable Future</p>
+    <p>HazeShield · Green Technology · Smart Agriculture · IoT · AI</p>
     <div class="footer-line"></div>
-
     <p>
       Meneroka teknologi untuk pemantauan kualiti udara dan kesihatan tanaman.
     </p>
-    <p>© <span id="year"></span> HazeShield Project</p>
+    <p>© <span id="year"></span> VERDANEX</p>
   </footer>
 
   <script>
